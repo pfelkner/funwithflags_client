@@ -4,6 +4,7 @@ import FlagComponent from "./FlagComponent";
 import StreakComponent from "./StreakComponent";
 import GuessComponent from "./GuessComponent";
 import axios from "axios";
+import { getUrl } from "../hooks/getUrl";
 
 
 interface Answers {
@@ -48,7 +49,7 @@ const GameComponent = () => {
   const getCountry = () => {
     setLoading(true);
     axios
-      .get("https://fwfserver.vercel.app/game/nextRound")
+      .get(`${getUrl()}/game/nextRound`)
       // .get("http://localhost:8080/game/nextRound")
       .then((resp) => {
         const data = resp.data;

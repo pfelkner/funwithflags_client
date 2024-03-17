@@ -17,6 +17,7 @@ import UserContext from "../../context/UserContext";
 import axios from "axios";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
+import { getUrl } from "../../hooks/getUrl";
 
 function Copyright(props) {
   return (
@@ -64,7 +65,7 @@ export default function SignIn() {
     };
     try {
       const resp = await axios.post(
-        "https://fwfserver.vercel.app/auth/signin",
+        `${getUrl()}/auth/signin`,
         // "http://localhost:8080/auth/signin",
         userData
       );

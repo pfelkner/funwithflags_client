@@ -6,6 +6,7 @@ import { green, red, blue, yellow } from "@mui/material/colors";
 import axios from "axios";
 import useUser from "../context/_UserContext";
 import UserContext from "../context/UserContext";
+import { getUrl } from "../hooks/getUrl";
 
 interface StreakComponentProps {
   streakCount: number;
@@ -22,7 +23,7 @@ const StreakComponent = ({ streakCount }:StreakComponentProps ) => {
 useEffect(() => {
   const userId = user.id;
   axios
-    .get(`https://fwfserver.vercel.app/score/${userId}`)
+    .get(`${getUrl()}/score/${userId}`)
     // .get(`http://localhost:8080/score/${userId}`)
     .then((response) => {
       console.log(response.data);
@@ -35,7 +36,7 @@ useEffect(() => {
 
   useEffect(() => {
       console.log('Unmounting StreakComponent', highestStreak, streakCount);
-      axios.post('https://fwfserver.vercel.app/score/update', {
+      axios.post(`${getUrl()}/score/update`, {
       // axios.post('http://localhost:8080/score/update', {
         userId: user.id,
         highestStreak: streakCount,

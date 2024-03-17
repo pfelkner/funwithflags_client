@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import axios from "axios";
 import { Skeleton } from "@mui/material";
+import { getUrl } from "../hooks/getUrl";
 
 function LobbyComponent() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ function LobbyComponent() {
   const [leaders, setLeader]:any = useState(null);
 
   const handlePlayClick = async () => {
-    const test = await axios.get("https://fwfserver.vercel.app/game/start");
+    await axios.get(`${getUrl()}/game/start`);
     // const test = await axios.get("http://localhost:8080/game/start");
 
     navigate("/funwithflags");
@@ -19,8 +20,8 @@ function LobbyComponent() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const users = await axios.get("https://fwfserver.vercel.app/auth/users");
-      const scores = await axios.get("https://fwfserver.vercel.app/score");
+      const users = await axios.get(`${getUrl()}/auth/users`);
+      const scores = await axios.get(`${getUrl()}/score`);
       // const users = await axios.get("http://localhost:8080/auth/users");
       // const scores = await axios.get("http://localhost:8080/score");
       const highscores = scores.data.slice(0, 3);
