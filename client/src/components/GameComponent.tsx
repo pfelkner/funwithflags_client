@@ -18,7 +18,16 @@ interface Country {
   options: string[];
 }
 
+interface DBCountry {
+  id: number;
+  name: string;
+  code: string;
+  population: number;
+  difficulty: number;
+}
+
 const GameComponent = () => {
+  let countries: DBCountry[] = [];
   const [answers, setAnswers] = useState<Answers>({ correct: 0, incorrect: 0 });
   const [isCorrectGuess, setIsCorrectGuess] = useState<boolean|null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -79,7 +88,16 @@ const GameComponent = () => {
   }, [answers]);
 
   useEffect(() => {
-    getCountry();
+    // getCountry();
+    const fetchCountries = async () => {
+
+      const _countries = await axios.get(`${getUrl()}/game/countries`);
+      countries = _countries.data;
+      console.log('countries'.repeat(20));
+      console.log(countries);
+      console.log('countries'.repeat(20));
+    }
+    fetchCountries();
   }, []);
   
   return (
