@@ -1,0 +1,474 @@
+[
+  { "country": "Afghanistan", "continent": "Asia", "population": 37172386 },
+  { "country": "Albania", "continent": "Europe", "population": 2866376 },
+  { "country": "Algeria", "continent": "Africa", "population": 42228429 },
+  { "country": "American Samoa", "continent": "Oceania", "population": 55465 },
+  { "country": "Andorra", "continent": "Europe", "population": 77006 },
+  { "country": "Angola", "continent": "Africa", "population": 30809762 },
+  { "country": "Anguilla", "continent": "North America", "population": 15094 },
+  { "country": "Antarctica", "continent": "Antarctica", "population": 1106 },
+  {
+    "country": "Antigua and Barbuda",
+    "continent": "North America",
+    "population": 96286
+  },
+  {
+    "country": "Argentina",
+    "continent": "South America",
+    "population": 44494502
+  },
+  { "country": "Armenia", "continent": "Asia", "population": 2951776 },
+  { "country": "Aruba", "continent": "North America", "population": 105845 },
+  { "country": "Australia", "continent": "Oceania", "population": 24982688 },
+  { "country": "Austria", "continent": "Europe", "population": 8840521 },
+  { "country": "Azerbaijan", "continent": "Asia", "population": 9939800 },
+  { "country": "Bahamas", "continent": "North America", "population": 385640 },
+  { "country": "Bahrain", "continent": "Asia", "population": 1569439 },
+  { "country": "Bangladesh", "continent": "Asia", "population": 161356039 },
+  { "country": "Barbados", "continent": "North America", "population": 286641 },
+  { "country": "Belarus", "continent": "Europe", "population": 9483499 },
+  { "country": "Belgium", "continent": "Europe", "population": 11433256 },
+  { "country": "Belize", "continent": "North America", "population": 383071 },
+  { "country": "Benin", "continent": "Africa", "population": 11485048 },
+  { "country": "Bermuda", "continent": "North America", "population": 63973 },
+  { "country": "Bhutan", "continent": "Asia", "population": 754394 },
+  {
+    "country": "Bolivia",
+    "continent": "South America",
+    "population": 11353142
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "continent": "Europe",
+    "population": 3323929
+  },
+  { "country": "Botswana", "continent": "Africa", "population": 2254126 },
+  { "country": "Bouvet Island", "continent": "Antarctica", "population": 0 },
+  {
+    "country": "Brazil",
+    "continent": "South America",
+    "population": 209469333
+  },
+  {
+    "country": "British Indian Ocean Territory",
+    "continent": "Africa",
+    "population": 0
+  },
+  { "country": "Brunei", "continent": "Asia", "population": 428962 },
+  { "country": "Bulgaria", "continent": "Europe", "population": 7025037 },
+  { "country": "Burkina Faso", "continent": "Africa", "population": 19751535 },
+  { "country": "Burundi", "continent": "Africa", "population": 11175378 },
+  { "country": "Cambodia", "continent": "Asia", "population": 16249798 },
+  { "country": "Cameroon", "continent": "Africa", "population": 25216237 },
+  { "country": "Canada", "continent": "North America", "population": 37057765 },
+  { "country": "Cape Verde", "continent": "Africa", "population": 543767 },
+  {
+    "country": "Cayman Islands",
+    "continent": "North America",
+    "population": 64174
+  },
+  {
+    "country": "Central African Republic",
+    "continent": "Africa",
+    "population": 4666377
+  },
+  { "country": "Chad", "continent": "Africa", "population": 15477751 },
+  { "country": "Chile", "continent": "South America", "population": 18729160 },
+  { "country": "China", "continent": "Asia", "population": 1392730000 },
+  { "country": "Christmas Island", "continent": "Oceania", "population": 1402 },
+  {
+    "country": "Cocos (Keeling) Islands",
+    "continent": "Oceania",
+    "population": 596
+  },
+  {
+    "country": "Colombia",
+    "continent": "South America",
+    "population": 49648685
+  },
+  { "country": "Comoros", "continent": "Africa", "population": 832322 },
+  { "country": "Congo", "continent": "Africa", "population": 5244363 },
+  { "country": "Cook Islands", "continent": "Oceania", "population": 17379 },
+  {
+    "country": "Costa Rica",
+    "continent": "North America",
+    "population": 4999441
+  },
+  { "country": "Croatia", "continent": "Europe", "population": 4087843 },
+  { "country": "Cuba", "continent": "North America", "population": 11338138 },
+  { "country": "Cyprus", "continent": "Asia", "population": 1189265 },
+  {
+    "country": "Czech Republic",
+    "continent": "Europe",
+    "population": 10629928
+  },
+  { "country": "Denmark", "continent": "Europe", "population": 5793636 },
+  { "country": "Djibouti", "continent": "Africa", "population": 958920 },
+  { "country": "Dominica", "continent": "North America", "population": 71625 },
+  {
+    "country": "Dominican Republic",
+    "continent": "North America",
+    "population": 10627165
+  },
+  { "country": "East Timor", "continent": "Asia", "population": 1267972 },
+  {
+    "country": "Ecuador",
+    "continent": "South America",
+    "population": 17084357
+  },
+  { "country": "Egypt", "continent": "Africa", "population": 98423595 },
+  {
+    "country": "El Salvador",
+    "continent": "North America",
+    "population": 6420744
+  },
+  { "country": "England", "continent": "Europe", "population": 55619400 },
+  {
+    "country": "Equatorial Guinea",
+    "continent": "Africa",
+    "population": 1308974
+  },
+  { "country": "Eritrea", "continent": "Africa", "population": 6213972 },
+  { "country": "Estonia", "continent": "Europe", "population": 1321977 },
+  { "country": "Ethiopia", "continent": "Africa", "population": 109224559 },
+  {
+    "country": "Falkland Islands",
+    "continent": "South America",
+    "population": 2840
+  },
+  { "country": "Faroe Islands", "continent": "Europe", "population": 48497 },
+  { "country": "Fiji Islands", "continent": "Oceania", "population": 883483 },
+  { "country": "Finland", "continent": "Europe", "population": 5515525 },
+  { "country": "France", "continent": "Europe", "population": 66977107 },
+  {
+    "country": "French Guiana",
+    "continent": "South America",
+    "population": 290691
+  },
+  {
+    "country": "French Polynesia",
+    "continent": "Oceania",
+    "population": 277679
+  },
+  {
+    "country": "French Southern territories",
+    "continent": "Antarctica",
+    "population": 0
+  },
+  { "country": "Gabon", "continent": "Africa", "population": 2119275 },
+  { "country": "Gambia", "continent": "Africa", "population": 2280102 },
+  { "country": "Georgia", "continent": "Asia", "population": 3726549 },
+  { "country": "Germany", "continent": "Europe", "population": 82905782 },
+  { "country": "Ghana", "continent": "Africa", "population": 29767108 },
+  { "country": "Gibraltar", "continent": "Europe", "population": 33718 },
+  { "country": "Greece", "continent": "Europe", "population": 10731726 },
+  { "country": "Greenland", "continent": "North America", "population": 56025 },
+  { "country": "Grenada", "continent": "North America", "population": 111454 },
+  {
+    "country": "Guadeloupe",
+    "continent": "North America",
+    "population": 395700
+  },
+  { "country": "Guam", "continent": "Oceania", "population": 165768 },
+  {
+    "country": "Guatemala",
+    "continent": "North America",
+    "population": 17247807
+  },
+  { "country": "Guinea", "continent": "Africa", "population": 12414318 },
+  { "country": "Guinea-Bissau", "continent": "Africa", "population": 1874309 },
+  { "country": "Guyana", "continent": "South America", "population": 779004 },
+  { "country": "Haiti", "continent": "North America", "population": 11123176 },
+  {
+    "country": "Heard Island and McDonald Islands",
+    "continent": "Antarctica",
+    "population": 0
+  },
+  {
+    "country": "Holy See (Vatican City State)",
+    "continent": "Europe",
+    "population": 825
+  },
+  {
+    "country": "Honduras",
+    "continent": "North America",
+    "population": 9587522
+  },
+  { "country": "Hong Kong", "continent": "Asia", "population": 7451000 },
+  { "country": "Hungary", "continent": "Europe", "population": 9775564 },
+  { "country": "Iceland", "continent": "Europe", "population": 352721 },
+  { "country": "India", "continent": "Asia", "population": 1352617328 },
+  { "country": "Indonesia", "continent": "Asia", "population": 267663435 },
+  { "country": "Iran", "continent": "Asia", "population": 81800269 },
+  { "country": "Iraq", "continent": "Asia", "population": 38433600 },
+  { "country": "Ireland", "continent": "Europe", "population": 4867309 },
+  { "country": "Israel", "continent": "Asia", "population": 8882800 },
+  { "country": "Italy", "continent": "Europe", "population": 60421760 },
+  { "country": "Ivory Coast", "continent": "Africa", "population": 25069229 },
+  { "country": "Jamaica", "continent": "North America", "population": 2934855 },
+  { "country": "Japan", "continent": "Asia", "population": 126529100 },
+  { "country": "Jordan", "continent": "Asia", "population": 9956011 },
+  { "country": "Kazakhstan", "continent": "Asia", "population": 18272430 },
+  { "country": "Kenya", "continent": "Africa", "population": 51393010 },
+  { "country": "Kiribati", "continent": "Oceania", "population": 115847 },
+  { "country": "Kuwait", "continent": "Asia", "population": 4137309 },
+  { "country": "Kyrgyzstan", "continent": "Asia", "population": 6322800 },
+  { "country": "Laos", "continent": "Asia", "population": 7061507 },
+  { "country": "Latvia", "continent": "Europe", "population": 1927174 },
+  { "country": "Lebanon", "continent": "Asia", "population": 6848925 },
+  { "country": "Lesotho", "continent": "Africa", "population": 2108132 },
+  { "country": "Liberia", "continent": "Africa", "population": 4818977 },
+  {
+    "country": "Libyan Arab Jamahiriya",
+    "continent": "Africa",
+    "population": 6678567
+  },
+  { "country": "Liechtenstein", "continent": "Europe", "population": 37910 },
+  { "country": "Lithuania", "continent": "Europe", "population": 2801543 },
+  { "country": "Luxembourg", "continent": "Europe", "population": 607950 },
+  { "country": "Macao", "continent": "Asia", "population": 631636 },
+  {
+    "country": "North Macedonia",
+    "continent": "Europe",
+    "population": 2084367
+  },
+  { "country": "Madagascar", "continent": "Africa", "population": 26262368 },
+  { "country": "Malawi", "continent": "Africa", "population": 18143315 },
+  { "country": "Malaysia", "continent": "Asia", "population": 31528585 },
+  { "country": "Maldives", "continent": "Asia", "population": 515696 },
+  { "country": "Mali", "continent": "Africa", "population": 19077690 },
+  { "country": "Malta", "continent": "Europe", "population": 484630 },
+  {
+    "country": "Marshall Islands",
+    "continent": "Oceania",
+    "population": 58413
+  },
+  {
+    "country": "Martinique",
+    "continent": "North America",
+    "population": 376480
+  },
+  { "country": "Mauritania", "continent": "Africa", "population": 4403319 },
+  { "country": "Mauritius", "continent": "Africa", "population": 1265303 },
+  { "country": "Mayotte", "continent": "Africa", "population": 270372 },
+  {
+    "country": "Mexico",
+    "continent": "North America",
+    "population": 126190788
+  },
+  {
+    "country": "Micronesia, Federated States of",
+    "continent": "Oceania",
+    "population": 112640
+  },
+  { "country": "Moldova", "continent": "Europe", "population": 2706049 },
+  { "country": "Monaco", "continent": "Europe", "population": 38682 },
+  { "country": "Mongolia", "continent": "Asia", "population": 3170208 },
+  { "country": "Montenegro", "continent": "Europe", "population": 631219 },
+  { "country": "Montserrat", "continent": "North America", "population": 5900 },
+  { "country": "Morocco", "continent": "Africa", "population": 36029138 },
+  { "country": "Mozambique", "continent": "Africa", "population": 29495962 },
+  { "country": "Myanmar", "continent": "Asia", "population": 53708395 },
+  { "country": "Namibia", "continent": "Africa", "population": 2448255 },
+  { "country": "Nauru", "continent": "Oceania", "population": 12704 },
+  { "country": "Nepal", "continent": "Asia", "population": 28087871 },
+  { "country": "Netherlands", "continent": "Europe", "population": 17231624 },
+  {
+    "country": "Netherlands Antilles",
+    "continent": "North America",
+    "population": 227049
+  },
+  { "country": "New Caledonia", "continent": "Oceania", "population": 284060 },
+  { "country": "New Zealand", "continent": "Oceania", "population": 4841000 },
+  {
+    "country": "Nicaragua",
+    "continent": "North America",
+    "population": 6465513
+  },
+  { "country": "Niger", "continent": "Africa", "population": 22442948 },
+  { "country": "Nigeria", "continent": "Africa", "population": 195874740 },
+  { "country": "Niue", "continent": "Oceania", "population": 1624 },
+  { "country": "Norfolk Island", "continent": "Oceania", "population": 2169 },
+  { "country": "North Korea", "continent": "Asia", "population": 25549819 },
+  {
+    "country": "Northern Ireland",
+    "continent": "Europe",
+    "population": 1885400
+  },
+  {
+    "country": "Northern Mariana Islands",
+    "continent": "Oceania",
+    "population": 56882
+  },
+  { "country": "Norway", "continent": "Europe", "population": 5311916 },
+  { "country": "Oman", "continent": "Asia", "population": 4829483 },
+  { "country": "Pakistan", "continent": "Asia", "population": 212215030 },
+  { "country": "Palau", "continent": "Oceania", "population": 17907 },
+  { "country": "Palestine", "continent": "Asia", "population": 4569087 },
+  { "country": "Panama", "continent": "North America", "population": 4176873 },
+  {
+    "country": "Papua New Guinea",
+    "continent": "Oceania",
+    "population": 8606316
+  },
+  {
+    "country": "Paraguay",
+    "continent": "South America",
+    "population": 6956071
+  },
+  { "country": "Peru", "continent": "South America", "population": 31989256 },
+  { "country": "Philippines", "continent": "Asia", "population": 106651922 },
+  { "country": "Pitcairn", "continent": "Oceania", "population": 67 },
+  { "country": "Poland", "continent": "Europe", "population": 37974750 },
+  { "country": "Portugal", "continent": "Europe", "population": 10283822 },
+  {
+    "country": "Puerto Rico",
+    "continent": "North America",
+    "population": 3195153
+  },
+  { "country": "Qatar", "continent": "Asia", "population": 2781677 },
+  { "country": "Reunion", "continent": "Africa", "population": 859959 },
+  { "country": "Romania", "continent": "Europe", "population": 19466145 },
+  { "country": "Russia", "continent": "Europe", "population": 144478050 },
+  { "country": "Rwanda", "continent": "Africa", "population": 12301939 },
+  { "country": "Saint Helena", "continent": "Africa", "population": 6600 },
+  {
+    "country": "Saint Kitts and Nevis",
+    "continent": "North America",
+    "population": 52441
+  },
+  {
+    "country": "Saint Lucia",
+    "continent": "North America",
+    "population": 181889
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "continent": "North America",
+    "population": 5888
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "continent": "North America",
+    "population": 110210
+  },
+  { "country": "Samoa", "continent": "Oceania", "population": 196130 },
+  { "country": "San Marino", "continent": "Europe", "population": 33785 },
+  {
+    "country": "Sao Tome and Principe",
+    "continent": "Africa",
+    "population": 211028
+  },
+  { "country": "Saudi Arabia", "continent": "Asia", "population": 33699947 },
+  { "country": "Scotland", "continent": "Europe", "population": 5424800 },
+  { "country": "Senegal", "continent": "Africa", "population": 15854360 },
+  { "country": "Serbia", "continent": "Europe", "population": 6963764 },
+  { "country": "Seychelles", "continent": "Africa", "population": 96762 },
+  { "country": "Sierra Leone", "continent": "Africa", "population": 7650154 },
+  { "country": "Singapore", "continent": "Asia", "population": 5638676 },
+  { "country": "Slovakia", "continent": "Europe", "population": 5446771 },
+  { "country": "Slovenia", "continent": "Europe", "population": 2073894 },
+  {
+    "country": "Solomon Islands",
+    "continent": "Oceania",
+    "population": 652858
+  },
+  { "country": "Somalia", "continent": "Africa", "population": 15008154 },
+  { "country": "South Africa", "continent": "Africa", "population": 57779622 },
+  {
+    "country": "South Georgia and the South Sandwich Islands",
+    "continent": "Antarctica",
+    "population": 30
+  },
+  { "country": "South Korea", "continent": "Asia", "population": 51606633 },
+  { "country": "South Sudan", "continent": "Africa", "population": 10975920 },
+  { "country": "Spain", "continent": "Europe", "population": 46796540 },
+  { "country": "Sri Lanka", "continent": "Asia", "population": 21670000 },
+  { "country": "Sudan", "continent": "Africa", "population": 41801533 },
+  { "country": "Suriname", "continent": "South America", "population": 575991 },
+  {
+    "country": "Svalbard and Jan Mayen",
+    "continent": "Europe",
+    "population": 2572
+  },
+  { "country": "Swaziland", "continent": "Africa", "population": 1136191 },
+  { "country": "Sweden", "continent": "Europe", "population": 10175214 },
+  { "country": "Switzerland", "continent": "Europe", "population": 8513227 },
+  { "country": "Syria", "continent": "Asia", "population": 16906283 },
+  { "country": "Tajikistan", "continent": "Asia", "population": 9100837 },
+  { "country": "Tanzania", "continent": "Africa", "population": 56318348 },
+  { "country": "Thailand", "continent": "Asia", "population": 69428524 },
+  {
+    "country": "The Democratic Republic of Congo",
+    "continent": "Africa",
+    "population": 84068091
+  },
+  { "country": "Togo", "continent": "Africa", "population": 7889094 },
+  { "country": "Tokelau", "continent": "Oceania", "population": 1411 },
+  { "country": "Tonga", "continent": "Oceania", "population": 103197 },
+  {
+    "country": "Trinidad and Tobago",
+    "continent": "North America",
+    "population": 1389858
+  },
+  { "country": "Tunisia", "continent": "Africa", "population": 11565204 },
+  { "country": "Turkey", "continent": "Asia", "population": 82319724 },
+  { "country": "Turkmenistan", "continent": "Asia", "population": 5850908 },
+  {
+    "country": "Turks and Caicos Islands",
+    "continent": "North America",
+    "population": 37665
+  },
+  { "country": "Tuvalu", "continent": "Oceania", "population": 11508 },
+  { "country": "Uganda", "continent": "Africa", "population": 42723139 },
+  { "country": "Ukraine", "continent": "Europe", "population": 44622516 },
+  {
+    "country": "United Arab Emirates",
+    "continent": "Asia",
+    "population": 9630959
+  },
+  {
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "population": 66460344
+  },
+  {
+    "country": "United States",
+    "continent": "North America",
+    "population": 326687501
+  },
+  {
+    "country": "United States Minor Outlying Islands",
+    "continent": "Oceania",
+    "population": 300
+  },
+  { "country": "Uruguay", "continent": "South America", "population": 3449299 },
+  { "country": "Uzbekistan", "continent": "Asia", "population": 32955400 },
+  { "country": "Vanuatu", "continent": "Oceania", "population": 292680 },
+  {
+    "country": "Venezuela",
+    "continent": "South America",
+    "population": 28870195
+  },
+  { "country": "Vietnam", "continent": "Asia", "population": 95540395 },
+  {
+    "country": "Virgin Islands, British",
+    "continent": "North America",
+    "population": 29802
+  },
+  {
+    "country": "Virgin Islands, U.S.",
+    "continent": "North America",
+    "population": 106977
+  },
+  { "country": "Wales", "continent": "Europe", "population": 3139000 },
+  {
+    "country": "Wallis and Futuna",
+    "continent": "Oceania",
+    "population": 15289
+  },
+  { "country": "Western Sahara", "continent": "Africa", "population": 652271 },
+  { "country": "Yemen", "continent": "Asia", "population": 28498687 },
+  { "country": "Zambia", "continent": "Africa", "population": 17351822 },
+  { "country": "Zimbabwe", "continent": "Africa", "population": 14439018 }
+]

@@ -1,0 +1,1448 @@
+[
+  {
+    "country": "Afghanistan",
+    "population": 37172386,
+    "continent": "Asia",
+    "abbreviation": "af"
+  },
+  {
+    "country": "Albania",
+    "population": 2866376,
+    "continent": "Europe",
+    "abbreviation": "al"
+  },
+  {
+    "country": "Algeria",
+    "population": 42228429,
+    "continent": "Africa",
+    "abbreviation": "dz"
+  },
+  {
+    "country": "American Samoa",
+    "population": 55465,
+    "continent": "Oceania",
+    "abbreviation": "as"
+  },
+  {
+    "country": "Andorra",
+    "population": 77006,
+    "continent": "Europe",
+    "abbreviation": "ad"
+  },
+  {
+    "country": "Angola",
+    "population": 30809762,
+    "continent": "Africa",
+    "abbreviation": "ao"
+  },
+  {
+    "country": "Anguilla",
+    "population": 15094,
+    "continent": "North America",
+    "abbreviation": "ai"
+  },
+  {
+    "country": "Antarctica",
+    "population": 1106,
+    "continent": "Antarctica",
+    "abbreviation": "aq"
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "population": 96286,
+    "continent": "North America",
+    "abbreviation": "ag"
+  },
+  {
+    "country": "Argentina",
+    "population": 44494502,
+    "continent": "South America",
+    "abbreviation": "ar"
+  },
+  {
+    "country": "Armenia",
+    "population": 2951776,
+    "continent": "Asia",
+    "abbreviation": "am"
+  },
+  {
+    "country": "Aruba",
+    "population": 105845,
+    "continent": "North America",
+    "abbreviation": "aw"
+  },
+  {
+    "country": "Australia",
+    "population": 24982688,
+    "continent": "Oceania",
+    "abbreviation": "au"
+  },
+  {
+    "country": "Austria",
+    "population": 8840521,
+    "continent": "Europe",
+    "abbreviation": "at"
+  },
+  {
+    "country": "Azerbaijan",
+    "population": 9939800,
+    "continent": "Asia",
+    "abbreviation": "az"
+  },
+  {
+    "country": "Bahamas",
+    "population": 385640,
+    "continent": "North America",
+    "abbreviation": "bs"
+  },
+  {
+    "country": "Bahrain",
+    "population": 1569439,
+    "continent": "Asia",
+    "abbreviation": "bh"
+  },
+  {
+    "country": "Bangladesh",
+    "population": 161356039,
+    "continent": "Asia",
+    "abbreviation": "bd"
+  },
+  {
+    "country": "Barbados",
+    "population": 286641,
+    "continent": "North America",
+    "abbreviation": "bb"
+  },
+  {
+    "country": "Belarus",
+    "population": 9483499,
+    "continent": "Europe",
+    "abbreviation": "by"
+  },
+  {
+    "country": "Belgium",
+    "population": 11433256,
+    "continent": "Europe",
+    "abbreviation": "be"
+  },
+  {
+    "country": "Belize",
+    "population": 383071,
+    "continent": "North America",
+    "abbreviation": "bz"
+  },
+  {
+    "country": "Benin",
+    "population": 11485048,
+    "continent": "Africa",
+    "abbreviation": "bj"
+  },
+  {
+    "country": "Bermuda",
+    "population": 63973,
+    "continent": "North America",
+    "abbreviation": "bm"
+  },
+  {
+    "country": "Bhutan",
+    "population": 754394,
+    "continent": "Asia",
+    "abbreviation": "bt"
+  },
+  {
+    "country": "Bolivia",
+    "population": 11353142,
+    "continent": "South America",
+    "abbreviation": "bo"
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "population": 3323929,
+    "continent": "Europe",
+    "abbreviation": "ba"
+  },
+  {
+    "country": "Botswana",
+    "population": 2254126,
+    "continent": "Africa",
+    "abbreviation": "bw"
+  },
+  {
+    "country": "Bouvet Island",
+    "population": 0,
+    "continent": "Antarctica",
+    "abbreviation": "bv"
+  },
+  {
+    "country": "Brazil",
+    "population": 209469333,
+    "continent": "South America",
+    "abbreviation": "br"
+  },
+  {
+    "country": "British Indian Ocean Territory",
+    "population": 0,
+    "continent": "Africa",
+    "abbreviation": "io"
+  },
+  {
+    "country": "Brunei",
+    "population": 428962,
+    "continent": "Asia",
+    "abbreviation": "bn"
+  },
+  {
+    "country": "Bulgaria",
+    "population": 7025037,
+    "continent": "Europe",
+    "abbreviation": "bg"
+  },
+  {
+    "country": "Burkina Faso",
+    "population": 19751535,
+    "continent": "Africa",
+    "abbreviation": "bf"
+  },
+  {
+    "country": "Burundi",
+    "population": 11175378,
+    "continent": "Africa",
+    "abbreviation": "bi"
+  },
+  {
+    "country": "Cambodia",
+    "population": 16249798,
+    "continent": "Asia",
+    "abbreviation": "kh"
+  },
+  {
+    "country": "Cameroon",
+    "population": 25216237,
+    "continent": "Africa",
+    "abbreviation": "cm"
+  },
+  {
+    "country": "Canada",
+    "population": 37057765,
+    "continent": "North America",
+    "abbreviation": "ca"
+  },
+  {
+    "country": "Cape Verde",
+    "population": 543767,
+    "continent": "Africa",
+    "abbreviation": "cv"
+  },
+  {
+    "country": "Cayman Islands",
+    "population": 64174,
+    "continent": "North America",
+    "abbreviation": "ky"
+  },
+  {
+    "country": "Central African Republic",
+    "population": 4666377,
+    "continent": "Africa",
+    "abbreviation": "cf"
+  },
+  {
+    "country": "Chad",
+    "population": 15477751,
+    "continent": "Africa",
+    "abbreviation": "td"
+  },
+  {
+    "country": "Chile",
+    "population": 18729160,
+    "continent": "South America",
+    "abbreviation": "cl"
+  },
+  {
+    "country": "China",
+    "population": 1392730000,
+    "continent": "Asia",
+    "abbreviation": "cn"
+  },
+  {
+    "country": "Christmas Island",
+    "population": 1402,
+    "continent": "Oceania",
+    "abbreviation": "cx"
+  },
+  {
+    "country": "Cocos (Keeling) Islands",
+    "population": 596,
+    "continent": "Oceania",
+    "abbreviation": "cc"
+  },
+  {
+    "country": "Colombia",
+    "population": 49648685,
+    "continent": "South America",
+    "abbreviation": "co"
+  },
+  {
+    "country": "Comoros",
+    "population": 832322,
+    "continent": "Africa",
+    "abbreviation": "km"
+  },
+  {
+    "country": "Congo",
+    "population": 5244363,
+    "continent": "Africa",
+    "abbreviation": "cg"
+  },
+  {
+    "country": "Cook Islands",
+    "population": 17379,
+    "continent": "Oceania",
+    "abbreviation": "ck"
+  },
+  {
+    "country": "Costa Rica",
+    "population": 4999441,
+    "continent": "North America",
+    "abbreviation": "cr"
+  },
+  {
+    "country": "Croatia",
+    "population": 4087843,
+    "continent": "Europe",
+    "abbreviation": "hr"
+  },
+  {
+    "country": "Cuba",
+    "population": 11338138,
+    "continent": "North America",
+    "abbreviation": "cu"
+  },
+  {
+    "country": "Cyprus",
+    "population": 1189265,
+    "continent": "Asia",
+    "abbreviation": "cy"
+  },
+  {
+    "country": "Czech Republic",
+    "population": 10629928,
+    "continent": "Europe",
+    "abbreviation": "cz"
+  },
+  {
+    "country": "Denmark",
+    "population": 5793636,
+    "continent": "Europe",
+    "abbreviation": "dk"
+  },
+  {
+    "country": "Djibouti",
+    "population": 958920,
+    "continent": "Africa",
+    "abbreviation": "dj"
+  },
+  {
+    "country": "Dominica",
+    "population": 71625,
+    "continent": "North America",
+    "abbreviation": "dm"
+  },
+  {
+    "country": "Dominican Republic",
+    "population": 10627165,
+    "continent": "North America",
+    "abbreviation": "do"
+  },
+  {
+    "country": "East Timor",
+    "population": 1267972,
+    "continent": "Asia",
+    "abbreviation": "tp"
+  },
+  {
+    "country": "Ecuador",
+    "population": 17084357,
+    "continent": "South America",
+    "abbreviation": "ec"
+  },
+  {
+    "country": "Egypt",
+    "population": 98423595,
+    "continent": "Africa",
+    "abbreviation": "eg"
+  },
+  {
+    "country": "El Salvador",
+    "population": 6420744,
+    "continent": "North America",
+    "abbreviation": "sv"
+  },
+  {
+    "country": "Equatorial Guinea",
+    "population": 1308974,
+    "continent": "Africa",
+    "abbreviation": "gq"
+  },
+  {
+    "country": "Eritrea",
+    "population": 6213972,
+    "continent": "Africa",
+    "abbreviation": "er"
+  },
+  {
+    "country": "Estonia",
+    "population": 1321977,
+    "continent": "Europe",
+    "abbreviation": "ee"
+  },
+  {
+    "country": "Ethiopia",
+    "population": 109224559,
+    "continent": "Africa",
+    "abbreviation": "et"
+  },
+  {
+    "country": "Falkland Islands",
+    "population": 2840,
+    "continent": "South America",
+    "abbreviation": "fk"
+  },
+  {
+    "country": "Faroe Islands",
+    "population": 48497,
+    "continent": "Europe",
+    "abbreviation": "fo"
+  },
+  {
+    "country": "Fiji Islands",
+    "population": 883483,
+    "continent": "Oceania",
+    "abbreviation": "fj"
+  },
+  {
+    "country": "Finland",
+    "population": 5515525,
+    "continent": "Europe",
+    "abbreviation": "fi"
+  },
+  {
+    "country": "France",
+    "population": 66977107,
+    "continent": "Europe",
+    "abbreviation": "fr"
+  },
+  {
+    "country": "French Guiana",
+    "population": 290691,
+    "continent": "South America",
+    "abbreviation": "gf"
+  },
+  {
+    "country": "French Polynesia",
+    "population": 277679,
+    "continent": "Oceania",
+    "abbreviation": "pf"
+  },
+  {
+    "country": "French Southern territories",
+    "population": 0,
+    "continent": "Antarctica",
+    "abbreviation": "tf"
+  },
+  {
+    "country": "Gabon",
+    "population": 2119275,
+    "continent": "Africa",
+    "abbreviation": "ga"
+  },
+  {
+    "country": "Gambia",
+    "population": 2280102,
+    "continent": "Africa",
+    "abbreviation": "gm"
+  },
+  {
+    "country": "Georgia",
+    "population": 3726549,
+    "continent": "Asia",
+    "abbreviation": "ge"
+  },
+  {
+    "country": "Germany",
+    "population": 82905782,
+    "continent": "Europe",
+    "abbreviation": "de"
+  },
+  {
+    "country": "Ghana",
+    "population": 29767108,
+    "continent": "Africa",
+    "abbreviation": "gh"
+  },
+  {
+    "country": "Gibraltar",
+    "population": 33718,
+    "continent": "Europe",
+    "abbreviation": "gi"
+  },
+  {
+    "country": "Greece",
+    "population": 10731726,
+    "continent": "Europe",
+    "abbreviation": "gr"
+  },
+  {
+    "country": "Greenland",
+    "population": 56025,
+    "continent": "North America",
+    "abbreviation": "gl"
+  },
+  {
+    "country": "Grenada",
+    "population": 111454,
+    "continent": "North America",
+    "abbreviation": "gd"
+  },
+  {
+    "country": "Guadeloupe",
+    "population": 395700,
+    "continent": "North America",
+    "abbreviation": "gp"
+  },
+  {
+    "country": "Guam",
+    "population": 165768,
+    "continent": "Oceania",
+    "abbreviation": "gu"
+  },
+  {
+    "country": "Guatemala",
+    "population": 17247807,
+    "continent": "North America",
+    "abbreviation": "gt"
+  },
+  {
+    "country": "Guinea",
+    "population": 12414318,
+    "continent": "Africa",
+    "abbreviation": "gn"
+  },
+  {
+    "country": "Guinea-Bissau",
+    "population": 1874309,
+    "continent": "Africa",
+    "abbreviation": "gw"
+  },
+  {
+    "country": "Guyana",
+    "population": 779004,
+    "continent": "South America",
+    "abbreviation": "gy"
+  },
+  {
+    "country": "Haiti",
+    "population": 11123176,
+    "continent": "North America",
+    "abbreviation": "ht"
+  },
+  {
+    "country": "Heard Island and McDonald Islands",
+    "population": 0,
+    "continent": "Antarctica",
+    "abbreviation": "hm"
+  },
+  {
+    "country": "Holy See (Vatican City State)",
+    "population": 825,
+    "continent": "Europe",
+    "abbreviation": "va"
+  },
+  {
+    "country": "Honduras",
+    "population": 9587522,
+    "continent": "North America",
+    "abbreviation": "hn"
+  },
+  {
+    "country": "Hong Kong",
+    "population": 7451000,
+    "continent": "Asia",
+    "abbreviation": "hk"
+  },
+  {
+    "country": "Hungary",
+    "population": 9775564,
+    "continent": "Europe",
+    "abbreviation": "hu"
+  },
+  {
+    "country": "Iceland",
+    "population": 352721,
+    "continent": "Europe",
+    "abbreviation": "is"
+  },
+  {
+    "country": "India",
+    "population": 1352617328,
+    "continent": "Asia",
+    "abbreviation": "in"
+  },
+  {
+    "country": "Indonesia",
+    "population": 267663435,
+    "continent": "Asia",
+    "abbreviation": "id"
+  },
+  {
+    "country": "Iran",
+    "population": 81800269,
+    "continent": "Asia",
+    "abbreviation": "ir"
+  },
+  {
+    "country": "Iraq",
+    "population": 38433600,
+    "continent": "Asia",
+    "abbreviation": "iq"
+  },
+  {
+    "country": "Ireland",
+    "population": 4867309,
+    "continent": "Europe",
+    "abbreviation": "ie"
+  },
+  {
+    "country": "Israel",
+    "population": 8882800,
+    "continent": "Asia",
+    "abbreviation": "il"
+  },
+  {
+    "country": "Italy",
+    "population": 60421760,
+    "continent": "Europe",
+    "abbreviation": "it"
+  },
+  {
+    "country": "Ivory Coast",
+    "population": 25069229,
+    "continent": "Africa",
+    "abbreviation": "ci"
+  },
+  {
+    "country": "Jamaica",
+    "population": 2934855,
+    "continent": "North America",
+    "abbreviation": "jm"
+  },
+  {
+    "country": "Japan",
+    "population": 126529100,
+    "continent": "Asia",
+    "abbreviation": "jp"
+  },
+  {
+    "country": "Jordan",
+    "population": 9956011,
+    "continent": "Asia",
+    "abbreviation": "jo"
+  },
+  {
+    "country": "Kazakhstan",
+    "population": 18272430,
+    "continent": "Asia",
+    "abbreviation": "kz"
+  },
+  {
+    "country": "Kenya",
+    "population": 51393010,
+    "continent": "Africa",
+    "abbreviation": "ke"
+  },
+  {
+    "country": "Kiribati",
+    "population": 115847,
+    "continent": "Oceania",
+    "abbreviation": "ki"
+  },
+  {
+    "country": "Kuwait",
+    "population": 4137309,
+    "continent": "Asia",
+    "abbreviation": "kw"
+  },
+  {
+    "country": "Kyrgyzstan",
+    "population": 6322800,
+    "continent": "Asia",
+    "abbreviation": "kg"
+  },
+  {
+    "country": "Laos",
+    "population": 7061507,
+    "continent": "Asia",
+    "abbreviation": "la"
+  },
+  {
+    "country": "Latvia",
+    "population": 1927174,
+    "continent": "Europe",
+    "abbreviation": "lv"
+  },
+  {
+    "country": "Lebanon",
+    "population": 6848925,
+    "continent": "Asia",
+    "abbreviation": "lb"
+  },
+  {
+    "country": "Lesotho",
+    "population": 2108132,
+    "continent": "Africa",
+    "abbreviation": "ls"
+  },
+  {
+    "country": "Liberia",
+    "population": 4818977,
+    "continent": "Africa",
+    "abbreviation": "lr"
+  },
+  {
+    "country": "Libyan Arab Jamahiriya",
+    "population": 6678567,
+    "continent": "Africa",
+    "abbreviation": "ly"
+  },
+  {
+    "country": "Liechtenstein",
+    "population": 37910,
+    "continent": "Europe",
+    "abbreviation": "li"
+  },
+  {
+    "country": "Lithuania",
+    "population": 2801543,
+    "continent": "Europe",
+    "abbreviation": "lt"
+  },
+  {
+    "country": "Luxembourg",
+    "population": 607950,
+    "continent": "Europe",
+    "abbreviation": "lu"
+  },
+  {
+    "country": "Macao",
+    "population": 631636,
+    "continent": "Asia",
+    "abbreviation": "mo"
+  },
+  {
+    "country": "North Macedonia",
+    "population": 2084367,
+    "continent": "Europe",
+    "abbreviation": "mk"
+  },
+  {
+    "country": "Madagascar",
+    "population": 26262368,
+    "continent": "Africa",
+    "abbreviation": "mg"
+  },
+  {
+    "country": "Malawi",
+    "population": 18143315,
+    "continent": "Africa",
+    "abbreviation": "mw"
+  },
+  {
+    "country": "Malaysia",
+    "population": 31528585,
+    "continent": "Asia",
+    "abbreviation": "my"
+  },
+  {
+    "country": "Maldives",
+    "population": 515696,
+    "continent": "Asia",
+    "abbreviation": "mv"
+  },
+  {
+    "country": "Mali",
+    "population": 19077690,
+    "continent": "Africa",
+    "abbreviation": "ml"
+  },
+  {
+    "country": "Malta",
+    "population": 484630,
+    "continent": "Europe",
+    "abbreviation": "mt"
+  },
+  {
+    "country": "Marshall Islands",
+    "population": 58413,
+    "continent": "Oceania",
+    "abbreviation": "mh"
+  },
+  {
+    "country": "Martinique",
+    "population": 376480,
+    "continent": "North America",
+    "abbreviation": "mq"
+  },
+  {
+    "country": "Mauritania",
+    "population": 4403319,
+    "continent": "Africa",
+    "abbreviation": "mr"
+  },
+  {
+    "country": "Mauritius",
+    "population": 1265303,
+    "continent": "Africa",
+    "abbreviation": "mu"
+  },
+  {
+    "country": "Mayotte",
+    "population": 270372,
+    "continent": "Africa",
+    "abbreviation": "yt"
+  },
+  {
+    "country": "Mexico",
+    "population": 126190788,
+    "continent": "North America",
+    "abbreviation": "mx"
+  },
+  {
+    "country": "Micronesia, Federated States of",
+    "population": 112640,
+    "continent": "Oceania",
+    "abbreviation": "fm"
+  },
+  {
+    "country": "Moldova",
+    "population": 2706049,
+    "continent": "Europe",
+    "abbreviation": "md"
+  },
+  {
+    "country": "Monaco",
+    "population": 38682,
+    "continent": "Europe",
+    "abbreviation": "mc"
+  },
+  {
+    "country": "Mongolia",
+    "population": 3170208,
+    "continent": "Asia",
+    "abbreviation": "mn"
+  },
+  {
+    "country": "Montenegro",
+    "population": 631219,
+    "continent": "Europe",
+    "abbreviation": "me"
+  },
+  {
+    "country": "Montserrat",
+    "population": 5900,
+    "continent": "North America",
+    "abbreviation": "ms"
+  },
+  {
+    "country": "Morocco",
+    "population": 36029138,
+    "continent": "Africa",
+    "abbreviation": "ma"
+  },
+  {
+    "country": "Mozambique",
+    "population": 29495962,
+    "continent": "Africa",
+    "abbreviation": "mz"
+  },
+  {
+    "country": "Myanmar",
+    "population": 53708395,
+    "continent": "Asia",
+    "abbreviation": "mm"
+  },
+  {
+    "country": "Namibia",
+    "population": 2448255,
+    "continent": "Africa",
+    "abbreviation": "na"
+  },
+  {
+    "country": "Nauru",
+    "population": 12704,
+    "continent": "Oceania",
+    "abbreviation": "nr"
+  },
+  {
+    "country": "Nepal",
+    "population": 28087871,
+    "continent": "Asia",
+    "abbreviation": "np"
+  },
+  {
+    "country": "Netherlands",
+    "population": 17231624,
+    "continent": "Europe",
+    "abbreviation": "nl"
+  },
+  {
+    "country": "Netherlands Antilles",
+    "population": 227049,
+    "continent": "North America",
+    "abbreviation": "an"
+  },
+  {
+    "country": "New Caledonia",
+    "population": 284060,
+    "continent": "Oceania",
+    "abbreviation": "nc"
+  },
+  {
+    "country": "New Zealand",
+    "population": 4841000,
+    "continent": "Oceania",
+    "abbreviation": "nz"
+  },
+  {
+    "country": "Nicaragua",
+    "population": 6465513,
+    "continent": "North America",
+    "abbreviation": "ni"
+  },
+  {
+    "country": "Niger",
+    "population": 22442948,
+    "continent": "Africa",
+    "abbreviation": "ne"
+  },
+  {
+    "country": "Nigeria",
+    "population": 195874740,
+    "continent": "Africa",
+    "abbreviation": "ng"
+  },
+  {
+    "country": "Niue",
+    "population": 1624,
+    "continent": "Oceania",
+    "abbreviation": "nu"
+  },
+  {
+    "country": "Norfolk Island",
+    "population": 2169,
+    "continent": "Oceania",
+    "abbreviation": "nf"
+  },
+  {
+    "country": "North Korea",
+    "population": 25549819,
+    "continent": "Asia",
+    "abbreviation": "kp"
+  },
+  {
+    "country": "Northern Ireland",
+    "population": 1885400,
+    "continent": "Europe",
+    "abbreviation": "gb"
+  },
+  {
+    "country": "Northern Mariana Islands",
+    "population": 56882,
+    "continent": "Oceania",
+    "abbreviation": "mp"
+  },
+  {
+    "country": "Norway",
+    "population": 5311916,
+    "continent": "Europe",
+    "abbreviation": "no"
+  },
+  {
+    "country": "Oman",
+    "population": 4829483,
+    "continent": "Asia",
+    "abbreviation": "om"
+  },
+  {
+    "country": "Pakistan",
+    "population": 212215030,
+    "continent": "Asia",
+    "abbreviation": "pk"
+  },
+  {
+    "country": "Palau",
+    "population": 17907,
+    "continent": "Oceania",
+    "abbreviation": "pw"
+  },
+  {
+    "country": "Palestine",
+    "population": 4569087,
+    "continent": "Asia",
+    "abbreviation": "ps"
+  },
+  {
+    "country": "Panama",
+    "population": 4176873,
+    "continent": "North America",
+    "abbreviation": "pa"
+  },
+  {
+    "country": "Papua New Guinea",
+    "population": 8606316,
+    "continent": "Oceania",
+    "abbreviation": "pg"
+  },
+  {
+    "country": "Paraguay",
+    "population": 6956071,
+    "continent": "South America",
+    "abbreviation": "py"
+  },
+  {
+    "country": "Peru",
+    "population": 31989256,
+    "continent": "South America",
+    "abbreviation": "pe"
+  },
+  {
+    "country": "Philippines",
+    "population": 106651922,
+    "continent": "Asia",
+    "abbreviation": "ph"
+  },
+  {
+    "country": "Pitcairn",
+    "population": 67,
+    "continent": "Oceania",
+    "abbreviation": "pn"
+  },
+  {
+    "country": "Poland",
+    "population": 37974750,
+    "continent": "Europe",
+    "abbreviation": "pl"
+  },
+  {
+    "country": "Portugal",
+    "population": 10283822,
+    "continent": "Europe",
+    "abbreviation": "pt"
+  },
+  {
+    "country": "Puerto Rico",
+    "population": 3195153,
+    "continent": "North America",
+    "abbreviation": "pr"
+  },
+  {
+    "country": "Qatar",
+    "population": 2781677,
+    "continent": "Asia",
+    "abbreviation": "qa"
+  },
+  {
+    "country": "Reunion",
+    "population": 859959,
+    "continent": "Africa",
+    "abbreviation": "re"
+  },
+  {
+    "country": "Romania",
+    "population": 19466145,
+    "continent": "Europe",
+    "abbreviation": "ro"
+  },
+  {
+    "country": "Russia",
+    "population": 144478050,
+    "continent": "Europe",
+    "abbreviation": "ru"
+  },
+  {
+    "country": "Rwanda",
+    "population": 12301939,
+    "continent": "Africa",
+    "abbreviation": "rw"
+  },
+  {
+    "country": "Saint Helena",
+    "population": 6600,
+    "continent": "Africa",
+    "abbreviation": "sh"
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "population": 52441,
+    "continent": "North America",
+    "abbreviation": "kn"
+  },
+  {
+    "country": "Saint Lucia",
+    "population": 181889,
+    "continent": "North America",
+    "abbreviation": "lc"
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "population": 5888,
+    "continent": "North America",
+    "abbreviation": "pm"
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "population": 110210,
+    "continent": "North America",
+    "abbreviation": "vc"
+  },
+  {
+    "country": "Samoa",
+    "population": 196130,
+    "continent": "Oceania",
+    "abbreviation": "ws"
+  },
+  {
+    "country": "San Marino",
+    "population": 33785,
+    "continent": "Europe",
+    "abbreviation": "sm"
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "population": 211028,
+    "continent": "Africa",
+    "abbreviation": "st"
+  },
+  {
+    "country": "Saudi Arabia",
+    "population": 33699947,
+    "continent": "Asia",
+    "abbreviation": "sa"
+  },
+  {
+    "country": "Senegal",
+    "population": 15854360,
+    "continent": "Africa",
+    "abbreviation": "sn"
+  },
+  {
+    "country": "Serbia",
+    "population": 6963764,
+    "continent": "Europe",
+    "abbreviation": "rs"
+  },
+  {
+    "country": "Seychelles",
+    "population": 96762,
+    "continent": "Africa",
+    "abbreviation": "sc"
+  },
+  {
+    "country": "Sierra Leone",
+    "population": 7650154,
+    "continent": "Africa",
+    "abbreviation": "sl"
+  },
+  {
+    "country": "Singapore",
+    "population": 5638676,
+    "continent": "Asia",
+    "abbreviation": "sg"
+  },
+  {
+    "country": "Slovakia",
+    "population": 5446771,
+    "continent": "Europe",
+    "abbreviation": "sk"
+  },
+  {
+    "country": "Slovenia",
+    "population": 2073894,
+    "continent": "Europe",
+    "abbreviation": "si"
+  },
+  {
+    "country": "Solomon Islands",
+    "population": 652858,
+    "continent": "Oceania",
+    "abbreviation": "sb"
+  },
+  {
+    "country": "Somalia",
+    "population": 15008154,
+    "continent": "Africa",
+    "abbreviation": "so"
+  },
+  {
+    "country": "South Africa",
+    "population": 57779622,
+    "continent": "Africa",
+    "abbreviation": "za"
+  },
+  {
+    "country": "South Georgia and the South Sandwich Islands",
+    "population": 30,
+    "continent": "Antarctica",
+    "abbreviation": "gs"
+  },
+  {
+    "country": "South Korea",
+    "population": 51606633,
+    "continent": "Asia",
+    "abbreviation": "kr"
+  },
+  {
+    "country": "South Sudan",
+    "population": 10975920,
+    "continent": "Africa",
+    "abbreviation": "ss"
+  },
+  {
+    "country": "Spain",
+    "population": 46796540,
+    "continent": "Europe",
+    "abbreviation": "es"
+  },
+  {
+    "country": "Sri Lanka",
+    "population": 21670000,
+    "continent": "Asia",
+    "abbreviation": "lk"
+  },
+  {
+    "country": "Sudan",
+    "population": 41801533,
+    "continent": "Africa",
+    "abbreviation": "sd"
+  },
+  {
+    "country": "Suriname",
+    "population": 575991,
+    "continent": "South America",
+    "abbreviation": "sr"
+  },
+  {
+    "country": "Svalbard and Jan Mayen",
+    "population": 2572,
+    "continent": "Europe",
+    "abbreviation": "sj"
+  },
+  {
+    "country": "Swaziland",
+    "population": 1136191,
+    "continent": "Africa",
+    "abbreviation": "sz"
+  },
+  {
+    "country": "Sweden",
+    "population": 10175214,
+    "continent": "Europe",
+    "abbreviation": "se"
+  },
+  {
+    "country": "Switzerland",
+    "population": 8513227,
+    "continent": "Europe",
+    "abbreviation": "ch"
+  },
+  {
+    "country": "Syria",
+    "population": 16906283,
+    "continent": "Asia",
+    "abbreviation": "sy"
+  },
+  {
+    "country": "Tajikistan",
+    "population": 9100837,
+    "continent": "Asia",
+    "abbreviation": "tj"
+  },
+  {
+    "country": "Tanzania",
+    "population": 56318348,
+    "continent": "Africa",
+    "abbreviation": "tz"
+  },
+  {
+    "country": "Thailand",
+    "population": 69428524,
+    "continent": "Asia",
+    "abbreviation": "th"
+  },
+  {
+    "country": "The Democratic Republic of Congo",
+    "population": 84068091,
+    "continent": "Africa",
+    "abbreviation": "cd"
+  },
+  {
+    "country": "Togo",
+    "population": 7889094,
+    "continent": "Africa",
+    "abbreviation": "tg"
+  },
+  {
+    "country": "Tokelau",
+    "population": 1411,
+    "continent": "Oceania",
+    "abbreviation": "tk"
+  },
+  {
+    "country": "Tonga",
+    "population": 103197,
+    "continent": "Oceania",
+    "abbreviation": "to"
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "population": 1389858,
+    "continent": "North America",
+    "abbreviation": "tt"
+  },
+  {
+    "country": "Tunisia",
+    "population": 11565204,
+    "continent": "Africa",
+    "abbreviation": "tn"
+  },
+  {
+    "country": "Turkey",
+    "population": 82319724,
+    "continent": "Asia",
+    "abbreviation": "tr"
+  },
+  {
+    "country": "Turkmenistan",
+    "population": 5850908,
+    "continent": "Asia",
+    "abbreviation": "tm"
+  },
+  {
+    "country": "Turks and Caicos Islands",
+    "population": 37665,
+    "continent": "North America",
+    "abbreviation": "tc"
+  },
+  {
+    "country": "Tuvalu",
+    "population": 11508,
+    "continent": "Oceania",
+    "abbreviation": "tv"
+  },
+  {
+    "country": "Uganda",
+    "population": 42723139,
+    "continent": "Africa",
+    "abbreviation": "ug"
+  },
+  {
+    "country": "Ukraine",
+    "population": 44622516,
+    "continent": "Europe",
+    "abbreviation": "ua"
+  },
+  {
+    "country": "United Arab Emirates",
+    "population": 9630959,
+    "continent": "Asia",
+    "abbreviation": "ae"
+  },
+  {
+    "country": "United Kingdom",
+    "population": 66460344,
+    "continent": "Europe",
+    "abbreviation": "uk"
+  },
+  {
+    "country": "United States",
+    "population": 326687501,
+    "continent": "North America",
+    "abbreviation": "us"
+  },
+  {
+    "country": "United States Minor Outlying Islands",
+    "population": 300,
+    "continent": "Oceania",
+    "abbreviation": "um"
+  },
+  {
+    "country": "Uruguay",
+    "population": 3449299,
+    "continent": "South America",
+    "abbreviation": "uy"
+  },
+  {
+    "country": "Uzbekistan",
+    "population": 32955400,
+    "continent": "Asia",
+    "abbreviation": "uz"
+  },
+  {
+    "country": "Vanuatu",
+    "population": 292680,
+    "continent": "Oceania",
+    "abbreviation": "vu"
+  },
+  {
+    "country": "Venezuela",
+    "population": 28870195,
+    "continent": "South America",
+    "abbreviation": "ve"
+  },
+  {
+    "country": "Vietnam",
+    "population": 95540395,
+    "continent": "Asia",
+    "abbreviation": "vn"
+  },
+  {
+    "country": "Virgin Islands, British",
+    "population": 29802,
+    "continent": "North America",
+    "abbreviation": "vg"
+  },
+  {
+    "country": "Virgin Islands, U.S.",
+    "population": 106977,
+    "continent": "North America",
+    "abbreviation": "vi"
+  },
+  {
+    "country": "Wallis and Futuna",
+    "population": 15289,
+    "continent": "Oceania",
+    "abbreviation": "wf"
+  },
+  {
+    "country": "Western Sahara",
+    "population": 652271,
+    "continent": "Africa",
+    "abbreviation": "eh"
+  },
+  {
+    "country": "Yemen",
+    "population": 28498687,
+    "continent": "Asia",
+    "abbreviation": "ye"
+  },
+  {
+    "country": "Zambia",
+    "population": 17351822,
+    "continent": "Africa",
+    "abbreviation": "zm"
+  },
+  {
+    "country": "Zimbabwe",
+    "population": 14439018,
+    "continent": "Africa",
+    "abbreviation": "zw"
+  }
+]
