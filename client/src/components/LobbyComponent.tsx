@@ -12,7 +12,6 @@ function LobbyComponent() {
   const [leaders, setLeader]:any = useState(null);
 
   const handlePlayClick = async () => {
-    await axios.get(`${getUrl()}/game/start`);
 
     navigate("/funwithflags");
   };

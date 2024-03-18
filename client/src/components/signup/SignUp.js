@@ -16,6 +16,8 @@ import UserContext from "../../context/UserContext";
 import axios from "axios";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
+import { getUrl } from "../../hooks/getUrl";
+import useUser from "../../context/_UserContext";
 
 function Copyright(props) {
   return (
@@ -43,6 +45,7 @@ export default function SignUp() {
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
+  // const user = useUser();
   const [openSuccess, setOpenSuccess] = useState(false);
   const [openError, setOpenError] = useState(false);
 
@@ -60,9 +63,9 @@ export default function SignUp() {
     console.log(userData);
 
     axios
-      .post("https://fwfserver.vercel.app/auth/signup", userData)
-      // .post("http://localhost:8080/auth/signup", userData)
+      .post(`${getUrl()}/auth/signup`, userData)
       .then((resp) => {
+        // user?.setUser(resp.data);
         setUser(resp.data);
 
         setOpenSuccess(true);
