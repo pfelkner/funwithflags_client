@@ -20,6 +20,9 @@ const GuessComponent = ({ buttonLabels, onClick, solution }: GuessComponentProps
     const isCorrect = label === solution;
     setClicked(true);
     onClick(isCorrect);
+    setTimeout(() => {
+      setClicked(false);
+    }, 800);
   };
   
   const home = (event:any):void  => {
