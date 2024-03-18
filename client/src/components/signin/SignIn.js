@@ -64,11 +64,7 @@ export default function SignIn() {
       highestStreak: 69,
     };
     try {
-      const resp = await axios.post(
-        `${getUrl()}/auth/signin`,
-        // "http://localhost:8080/auth/signin",
-        userData
-      );
+      const resp = await axios.post(`${getUrl()}/auth/signin`, userData);
       console.log(resp);
       if (resp.status === 200) {
         setUser(resp.data);

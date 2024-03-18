@@ -24,7 +24,6 @@ useEffect(() => {
   const userId = user.id;
   axios
     .get(`${getUrl()}/score/${userId}`)
-    // .get(`http://localhost:8080/score/${userId}`)
     .then((response) => {
       console.log(response.data);
       setHighestStreak(response.data.highestStreak);
@@ -37,7 +36,6 @@ useEffect(() => {
   useEffect(() => {
       console.log('Unmounting StreakComponent', highestStreak, streakCount);
       axios.post(`${getUrl()}/score/update`, {
-      // axios.post('http://localhost:8080/score/update', {
         userId: user.id,
         highestStreak: streakCount,
       })
