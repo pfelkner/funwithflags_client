@@ -5,7 +5,6 @@ import Card from "@mui/material/Card";
 interface FlagComponentProps {
   countryCode: string;
   isCorrectGuess: boolean | null;
-
 }
 
 const FlagComponent = ({ countryCode, isCorrectGuess }: FlagComponentProps) => {

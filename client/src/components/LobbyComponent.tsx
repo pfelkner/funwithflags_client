@@ -22,6 +22,7 @@ function LobbyComponent() {
     const fetchData = async () => {
       const users = await axios.get(`${getUrl()}/auth/users`);
       const scores = await axios.get(`${getUrl()}/score`);
+
       // const users = await axios.get("http://localhost:8080/auth/users");
       // const scores = await axios.get("http://localhost:8080/score");
       const highscores = scores.data.slice(0, 3);

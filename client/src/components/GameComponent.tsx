@@ -5,25 +5,19 @@ import StreakComponent from "./StreakComponent";
 import GuessComponent from "./GuessComponent";
 import axios from "axios";
 import { getUrl } from "../hooks/getUrl";
+import { getOptions, getRoundData, pickCountry, rollDifficulty } from "../hooks/gameHelpers";
+import { Answers, Country, RoundData } from "../models/models";
 
 
-interface Answers {
-  correct: number;
-  incorrect: number;
-}
-
-interface Country {
-  name: string;
-  code: string;
-  options: string[];
-}
 
 const GameComponent = () => {
+  // let countries: Country[] = [];
   const [answers, setAnswers] = useState<Answers>({ correct: 0, incorrect: 0 });
   const [isCorrectGuess, setIsCorrectGuess] = useState<boolean|null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-  const [country, setCountry] = useState<Country |null>(null);
+  const [round, setRoundData] = useState<any |null>(null);
   const [streak, setStreak] = useState<number>(0);
+  const [countries, setCountries] = useState<Country[]>([]);
 
   const prevCorrect = useRef<number>(0);
   const prevIncorrect = useRef<number>(0);
@@ -42,29 +36,11 @@ const GameComponent = () => {
             ...prev,
             incorrect: prev.incorrect + 1,
           }));
-      getCountry();
+      const rd = getRoundData(countries);
+      console.log('setting round data', rd);
+      setRoundData(rd);
     }, 800);
   };
-
-  const getCountry = () => {
-    setLoading(true);
-    axios
-      .get(`${getUrl()}/game/nextRound`)
-      // .get("http://localhost:8080/game/nextRound")
-      .then((resp) => {
-        const data = resp.data;
-        console.log('App:nextround'.repeat(20));
-        console.log(data);
-        console.log('App:nextround'.repeat(20));
-        setCountry(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        //TODO
-        console.error(error);
-      });
-  };
-  
 
   useEffect(() => {
     if (answers.correct !== prevCorrect.current) {
@@ -79,15 +55,31 @@ const GameComponent = () => {
   }, [answers]);
 
   useEffect(() => {
-    getCountry();
+    const fetchCountries = async () => {
+      const _countries = await axios.get(`${getUrl()}/game/countries`);
+      setCountries(_countries.data);
+      const roll = rollDifficulty();
+      const options = getOptions(roll, _countries.data); // Use _countries.data instead of countries
+      const pick = pickCountry(options);
+    
+      const data: RoundData = getRoundData(_countries.data); // Use _countries.data instead of countries
+      setRoundData(data);
+      setLoading(false);
+      setCountries(_countries.data.filter((country:any) => country.name !== pick.name)); // Use _countries.data instead of countries
+    }
+    fetchCountries();
   }, []);
+
+  useEffect(() => {
+    setCountries(prev => prev.filter((country) => country.name !== round?.name));
+  }, [round]);
   
   return (
     <div>
 
     {!loading && (
       <FlagComponent
-      countryCode={country!.code}
+      countryCode={round!.code}
       isCorrectGuess={isCorrectGuess}
       />
       )}
@@ -98,9 +90,9 @@ const GameComponent = () => {
   <StreakComponent streakCount={streak} />
   {!loading && (
     <GuessComponent
-    buttonLabels={country!.options}
+    buttonLabels={round!.options}
     onClick={processGuess}
-    solution={country!.name}
+    solution={round!.name}
     />
   )}
     </div>
