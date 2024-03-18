@@ -18,8 +18,9 @@ export const getOptions = (roll: number[], countries: Country[]): Country[] => {
   const medium = countries.filter((country) => country.population >= 10000000);
   const hard = countries.filter((country) => country.difficulty < 10000000);
 
-  // See if map works or back to foreach
-  const picks: Country[] = roll.map((difficulty) => {
+  let picks: Country[] = [];
+  let usedIndexes: Set<number> = new Set();
+  roll.forEach((difficulty) => {
     let chosenArray;
     if (difficulty === 1) {
       chosenArray = easy;
@@ -29,9 +30,12 @@ export const getOptions = (roll: number[], countries: Country[]): Country[] => {
       chosenArray = hard;
     }
 
-    const index = getRandom(chosenArray.length - 1);
-    // const index = Math.floor(Math.random() * chosenArray.length);
-    return chosenArray[index];
+    let index = getRandom(chosenArray.length - 1);
+    while (usedIndexes.has(index)) {
+      index = getRandom(chosenArray.length - 1);
+    }
+    usedIndexes.add(index);
+    picks.push(chosenArray[index]);
   });
 
   return picks;

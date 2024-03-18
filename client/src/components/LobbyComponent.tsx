@@ -5,20 +5,40 @@ import UserContext from "../context/UserContext";
 import axios from "axios";
 import { Skeleton } from "@mui/material";
 import { getUrl } from "../hooks/getUrl";
+import GameContext from "../context/GameContext";
+
 
 function LobbyComponent() {
   const navigate = useNavigate();
   const { user } : any = useContext(UserContext);
   const [leaders, setLeader]:any = useState(null);
+  const [hasCurrentGame, setHasCurrentGame] = useState(false);
+  let fetchedData: any = null;
+  const gameContext = useContext(GameContext);
+
+
 
   const handlePlayClick = async () => {
 
     navigate("/funwithflags");
   };
 
+  const handleContinueClick = () => {
+    navigate("/funwithflags", { state: { data: fetchedData } }); 
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const users = await axios.get(`${getUrl()}/auth/users`);
+
+      const currentGame = await axios.get(`${getUrl()}/game/current/${user.id}`);
+      if (currentGame.data && gameContext) {
+        fetchedData = currentGame.data;
+        gameContext?.setCurrentGame(currentGame.data);
+        setHasCurrentGame(true);
+      }
+      console.log('currentGame', currentGame.data);
+
       const scores = await axios.get(`${getUrl()}/score`);
 
 
@@ -71,6 +91,15 @@ function LobbyComponent() {
         }
       <Button variant="contained" color="primary" onClick={handlePlayClick}>
         Play
+      </Button> 
+       <Button
+        variant="contained"
+        color="secondary"
+        onClick={handleContinueClick}
+        disabled={!hasCurrentGame}
+        style={{ marginTop: "10px" }} 
+      >
+        Continue
       </Button>
     </div>
   );

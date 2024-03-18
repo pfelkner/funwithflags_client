@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
 import DangerousOutlinedIcon from "@mui/icons-material/DangerousOutlined";
 import CrisisAlertOutlinedIcon from "@mui/icons-material/CrisisAlertOutlined";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { green, red, blue } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -21,9 +22,11 @@ const CounterComponent = ({
 }: CounterComponentProps) => {
   const navigate = useNavigate();
   const [accuracy, setAccuracy] = useState(0);
+  const totalLife = 5;
+  const remainingLifes = totalLife - incorrect;
 
   useEffect(() => {
-    if (incorrect === 3) {
+    if (incorrect === totalLife) {
       handleGameOver();
       axios.get("http://localhost:8080/gameover");
       navigate("/lobby");
@@ -35,20 +38,6 @@ const CounterComponent = ({
     const newAccuracy = totalAttempts > 0 ? (correct / totalAttempts) * 100 : 0;
     setAccuracy(newAccuracy);
   }, [correct, incorrect]);
-
-  useEffect(() => {
-    // Empty function for initial effect
-    return () => {
-      // This function will be called when the component unmounts
-      // axios.post('http://your-api-url.com', { /* your data */ })
-      //   .then(response => {
-      //     console.log(response.data);
-      //   })
-      //   .catch(error => {
-      //     console.error('There was an error!', error);
-      //   });
-    };
-  }, []);
 
   return (
     <div
@@ -79,8 +68,8 @@ const CounterComponent = ({
           fontSize: "1.2rem",
         }}
       >
-        <DangerousOutlinedIcon style={{ color: red[500], fontSize: "2rem" }} />
-        <span>{incorrect}</span>
+        <FavoriteBorderIcon style={{ color: red[500], fontSize: "2rem" }} />
+        <span>{remainingLifes}</span>
       </div>
       <div
         style={{
