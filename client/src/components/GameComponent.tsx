@@ -26,20 +26,12 @@ const GameComponent = () => {
   const [countries, setCountries] = useState<Country[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-const answersRef = useRef(answers);
-const streakRef = useRef(streak);
-
-useEffect(() => {
-  answersRef.current = answers;
-}, [answers]);
-
-useEffect(() => {
-  streakRef.current = streak;
-}, [streak]);
-
+  const [prevCountires, setPrevCountries] = useState<string[]>([]);
   const handleGameOver = () => {
     setAnswers({ correct: 0, incorrect: 0 });
   };
+  // Passed to GuessComponent
+  // processes the users pick and updates state (triggers useEffect for round, answes and prevCountries)
   const processGuess = (isCorrect: boolean) => {
     setIsCorrectGuess(isCorrect);
     isCorrect ? setStreak((prev) => prev + 1) : setStreak(0);
@@ -50,61 +42,65 @@ useEffect(() => {
             ...prev,
             incorrect: prev.incorrect + 1,
           }));
-      const rd = getRoundData(countries);
-      setRoundData(rd);
+      const roundData = getRoundData(countries);
+      setRoundData(roundData);
+      setPrevCountries([...prevCountires, roundData.name]);
+
     }, 800);
   };
 
+  // Triggered when the answers state changes.
+  // stores current game data to db
+  // navigate to lobby if game over
   useEffect(() => {
-
-
+    console.log('round data pre save:', round);
     const gameData = {
       userId: userContext?.user.id,
       answers: answers,
-      accuracy: answersRef.current.correct / (answersRef.current.correct + answersRef.current.incorrect),
+      accuracy: answers.correct / (answers.correct + answers.incorrect),
       lives: 2 - answers.incorrect,
       currentStreak: streak,
+      prevCountries: prevCountires,
     }
+    console.log('posted game data:', gameData);
 
-      axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
-        const gameOver = res.data;
-        if (gameOver) {
-          gameContext?.setCurrentGame(
-            {
-              ...gameContext.currentGame,
-              currentStreak: 0,
-              answers: { correct: 0, incorrect: 0 },
-            }
-          )
-          navigate("/lobby");
-      }
-      }).catch((err) => {
-        console.log('Error saving game', err);
-      });
+    axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
+      const gameOver = res.data;
+      if (gameOver) {
+        gameContext?.setCurrentGame(
+          {
+            ...gameContext.currentGame,
+            currentStreak: 0,
+            answers: { correct: 0, incorrect: 0 },
+          }
+        )
+        navigate("/lobby");
+    }
+    }).catch((err) => {
+      console.log('Error saving game', err);
+    });
 
     setIsCorrectGuess(null);
   }, [answers]);
 
+  // Triggered when the component mounts. 
+  // Sets dispaly data based on prev. game
+  // fetches countries from db
+  // sets round data (flag, options, name) 
   useEffect(() => {
-    console.log('gamecontext'.repeat(20));
-    console.log(gameContext?.currentGame);
-    console.log('gamecontext'.repeat(20));
     if (gameContext?.currentGame) {
 
       setAnswers(gameContext?.currentGame.answers);
       setStreak(gameContext?.currentGame.currentStreak);
     }
     const fetchCountries = async () => {
-      const _countries = await axios.get(`${getUrl()}/game/countries`);
-      setCountries(_countries.data);
-      const roll = rollDifficulty();
-      const options = getOptions(roll, _countries.data); // Use _countries.data instead of countries
-      const pick = pickCountry(options);
-    
-      const data: RoundData = getRoundData(_countries.data); // Use _countries.data instead of countries
-      setRoundData(data);
+      const countries = await axios.get(`${getUrl()}/game/countries`);
+      const roundData: RoundData = getRoundData(countries.data); // Use _countries.data instead of countries
+  
+      setPrevCountries([...prevCountires, roundData.name]);
+      setRoundData(roundData);
       setLoading(false);
-      setCountries(_countries.data.filter((country:any) => country.name !== pick.name)); // Use _countries.data instead of countries
+      setCountries(countries.data.filter((country: Country) => country.name !== roundData.name));
     }
     fetchCountries();
     return () => { 
@@ -112,26 +108,12 @@ useEffect(() => {
     }
   }, []);
 
+  // Triggered when the round data changes. Currently from fetchCountries-useEffect & processGuess)
   useEffect(() => {
     setCountries(prev => prev.filter((country) => country.name !== round?.name));
   }, [round]);
-
-  useEffect(() => {
-    // const handleKeyDown = (event: KeyboardEvent) => {
-    //   if (event.key === 'Escape') {
-    //     setIsModalOpen(true);
-    //   }
-    // };
-  
-    // window.addEventListener('keydown', handleKeyDown);
-  
-    // return () => {
-    //   window.removeEventListener('keydown', handleKeyDown);
-    // };
-  }, []);
   
   return (
-
     <div>
     {!loading && round &&(
       <FlagComponent
@@ -149,13 +131,12 @@ useEffect(() => {
   <StreakComponent streakCount={streak} />
   {!loading && round &&(
     <GuessComponent
-    buttonLabels={round!.options}
+    buttonLabels={round!.options.sort()}
     onClick={processGuess}
     solution={round!.name}
     />
     )}
     </div>
-  
   );
 }
 

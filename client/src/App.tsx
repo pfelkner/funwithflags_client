@@ -19,7 +19,7 @@ function App() {
   return (
     <UserContext.Provider value={{ user, setUser }}>
     <QueryClientProvider client={queryClient}>
-    <GameContext.Provider value={{currentGame, setCurrentGame}}> // TODO
+    <GameContext.Provider value={{currentGame, setCurrentGame}}>
       <Router>
         <Routes>
           <Route path="/" element={<SignIn />} />
