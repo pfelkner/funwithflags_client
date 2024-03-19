@@ -60,7 +60,6 @@ export default function SignUp() {
       name: data.get("userName"),
       password: data.get("password"),
     };
-    console.log(userData);
 
     axios
       .post(`${getUrl()}/auth/signup`, userData)

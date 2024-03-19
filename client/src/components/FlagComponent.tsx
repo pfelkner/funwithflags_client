@@ -1,4 +1,3 @@
-// MyComponent.js
 import React from "react";
 import Card from "@mui/material/Card";
 
@@ -9,7 +8,6 @@ interface FlagComponentProps {
 
 const FlagComponent = ({ countryCode, isCorrectGuess }: FlagComponentProps) => {
   const link = `https://flagcdn.com/w320/${countryCode}.png`;
-  console.log("flagcomponent");
   return (
     <div
       style={{

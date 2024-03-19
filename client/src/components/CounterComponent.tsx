@@ -1,12 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
-import DangerousOutlinedIcon from "@mui/icons-material/DangerousOutlined";
 import CrisisAlertOutlinedIcon from "@mui/icons-material/CrisisAlertOutlined";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { green, red, blue } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import { getUrl } from "../hooks/getUrl";
 import UserContext from "../context/UserContext";
 
 
@@ -22,7 +19,6 @@ const CounterComponent = ({
   answers: { correct, incorrect },
   handleGameOver,
 }: CounterComponentProps) => {
-  const userContext = useContext(UserContext);
   const navigate = useNavigate();
   const [accuracy, setAccuracy] = useState(0);
   const totalLife = 2;

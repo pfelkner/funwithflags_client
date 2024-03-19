@@ -24,9 +24,6 @@ const GameComponent = () => {
   const [countries, setCountries] = useState<Country[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const prevCorrect = useRef<number>(0);
-  const prevIncorrect = useRef<number>(0);
-
 const answersRef = useRef(answers);
 const streakRef = useRef(streak);
 
@@ -38,21 +35,12 @@ useEffect(() => {
   streakRef.current = streak;
 }, [streak]);
 
-
-  const fetchedData = gameContext?.currentGame;
-  console.log('gameContext', fetchedData);
-
-
   const handleGameOver = () => {
     setAnswers({ correct: 0, incorrect: 0 });
   };
-  // gameContext?.setCurrentGame({...gameContext.currentGame, gameOver: true});
   const processGuess = (isCorrect: boolean) => {
     setIsCorrectGuess(isCorrect);
     isCorrect ? setStreak((prev) => prev + 1) : setStreak(0);
-    console.log('streak'.repeat(20));
-    console.log('isCorrect', isCorrect, 'streak', streak);
-    console.log('streak'.repeat(20));
     setTimeout(() => {
       isCorrect
         ? setAnswers((prev) => ({ ...prev, correct: prev.correct + 1 }))
@@ -61,19 +49,12 @@ useEffect(() => {
             incorrect: prev.incorrect + 1,
           }));
       const rd = getRoundData(countries);
-      console.log('setting round data', rd);
       setRoundData(rd);
     }, 800);
   };
 
   useEffect(() => {
-    // if (answers.correct !== prevCorrect.current) {
-    //   setStreak((prev) => prev + 1);
-    // } else if (answers.incorrect !== prevIncorrect.current) {
-    //   setStreak(0);
-    // }
 
-    prevCorrect.current = answers.correct;
 
     const gameData = {
       userId: userContext?.user.id,
@@ -86,36 +67,14 @@ useEffect(() => {
     
 
       axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
-        console.log('saved', res);
       }).catch((err) => {
         console.log('Error saving game', err);
       });
 
     setIsCorrectGuess(null);
   }, [answers]);
-  
-  // const { isLoading, error, data } = useQuery('countries', async () =>{
-
-  //   axios.get(`${getUrl()}/game/countries`).then((res) => {
-  //     const test = res.data;
-  //     console.log('data', test);
-  //     const roll = rollDifficulty();
-  //     const options = getOptions(roll, test);
-  //     const pick = pickCountry(options);
-  //     console.log(roll, options, pick);
-  
-  //     const data: RoundData = getRoundData(test);
-  //     console.log('setting round data', data);
-  //     setRoundData(data);
-  //     setCountries(countries.filter((country: any) => country.name !== pick.name));
-  //     return res.data
-  //   })
-
-  // }
-  // );
 
   useEffect(() => {
-console.log(gameContext?.currentGame);
     // setAnswers( !gameContext?.currentGame.gameOver ? gameContext?.currentGame.answers : { correct: 0, incorrect: 0 });
     // setStreak(!gameContext?.currentGame.gameover ? gameContext?.currentGame.currentStreak : 0);
     const fetchCountries = async () => {
@@ -132,24 +91,7 @@ console.log(gameContext?.currentGame);
     }
     fetchCountries();
     return () => { 
-      // const gameData = {
-      //   userId: userContext?.user.id,
-      //   answers: answersRef.current,
-      //   accuracy: answersRef.current.correct / (answersRef.current.correct + answersRef.current.incorrect),
-      //   lives: 2 - answersRef.current.incorrect,
-      //   currentStreak: streakRef.current,
-      // }
-      // console.log('DISMOUNT GAME'.repeat(20));
-      // console.log('before saving',gameContext?.currentGame);
-      // if (gameContext?.currentGame.gameOver) {
 
-      //   axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
-      //     console.log('saved', res);
-      //   }).catch((err) => {
-      //     console.log('Error saving game', err);
-      //   });
-      // }
-      console.log('DISMOUNT GAME'.repeat(20));
     }
   }, []);
 
@@ -169,9 +111,6 @@ console.log(gameContext?.currentGame);
     // return () => {
     //   window.removeEventListener('keydown', handleKeyDown);
     // };
-    console.log('#'.repeat(20));
-    console.log(streak);
-    console.log('#'.repeat(20));
   }, []);
   
   return (

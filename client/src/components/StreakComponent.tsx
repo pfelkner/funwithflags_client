@@ -1,10 +1,8 @@
-// MyComponent.js
 import React, { useContext, useEffect, useState } from "react";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import AutoGraphOutlinedIcon from "@mui/icons-material/AutoGraphOutlined";
-import { green, red, blue, yellow } from "@mui/material/colors";
+import {yellow } from "@mui/material/colors";
 import axios from "axios";
-import useUser from "../context/_UserContext";
 import UserContext from "../context/UserContext";
 import { getUrl } from "../hooks/getUrl";
 
@@ -15,9 +13,7 @@ interface StreakComponentProps {
 
 
 const StreakComponent = ({ streakCount }:StreakComponentProps ) => {
-  // const [streakCount, setStreakcount] = useState(0);
   const [highestStreak, setHighestStreak] = useState(0);
-  // const userContext = useUser();
   const { user } : any = useContext(UserContext);
 
 useEffect(() => {
@@ -25,7 +21,6 @@ useEffect(() => {
   axios
     .get(`${getUrl()}/score/${userId}`)
     .then((response) => {
-      console.log(response.data);
       setHighestStreak(response.data.highestStreak);
     })
     .catch((error) => {
@@ -34,7 +29,6 @@ useEffect(() => {
 }, []);
 
   useEffect(() => {
-      console.log('Unmounting StreakComponent', highestStreak, streakCount);
       axios.post(`${getUrl()}/score/update`, {
         userId: user.id,
         highestStreak: streakCount,
@@ -50,8 +44,6 @@ useEffect(() => {
   useEffect(() => {
     if (streakCount > highestStreak) {
       setHighestStreak(streakCount);
-      console.log('highestStreak:', highestStreak);
-      console.log('streakCount:', streakCount);
     }
   }, [streakCount]);
   return (

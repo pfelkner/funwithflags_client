@@ -19,9 +19,6 @@ function LobbyComponent() {
 
 
   const handlePlayClick = async () => {
-    console.log(gameContext?.currentGame);
-    // gameContext?.setCurrentGame({...gameContext.currentGame, gameOver: true});
-    console.log('Lobby:handlePlayClick', gameContext?.currentGame);
     navigate("/funwithflags");
   };
 
@@ -30,27 +27,21 @@ function LobbyComponent() {
   };
 
   useEffect(() => {
-    
-    console.log('Lobby:gamecontext'.repeat(20));
-    console.log(gameContext?.currentGame);
-    console.log('Lobby:gamecontext'.repeat(20));
+    ;
     const fetchData = async () => {
       const users = await axios.get(`${getUrl()}/auth/users`);
 
       const currentGame = await axios.get(`${getUrl()}/game/current/${user.id}`);
-      console.log('lobby:currentgame', currentGame);
       if (currentGame.data != '' && gameContext) {
         fetchedData = currentGame.data;
         gameContext?.setCurrentGame(currentGame.data);
         setHasCurrentGame(true);
       }
-      console.log('currentGame', currentGame.data);
 
       const scores = await axios.get(`${getUrl()}/score`);
 
 
       const highscores = scores.data.sort((a:any, b:any) => b.highestStreak - a.highestStreak).slice(0, 3);
-      console.log(highscores);
       const leaders = highscores.map((score:any) => {
         const user = users.data.find((u:any) => u.id === score.userId);
         return { name: user.name, streak: score.highestStreak };
