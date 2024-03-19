@@ -84,14 +84,13 @@ useEffect(() => {
     }
 
     
-    if (gameContext?.currentGame.gameOver) {
 
       axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
         console.log('saved', res);
       }).catch((err) => {
         console.log('Error saving game', err);
       });
-    }
+
     setIsCorrectGuess(null);
   }, [answers]);
   
@@ -117,8 +116,8 @@ useEffect(() => {
 
   useEffect(() => {
 console.log(gameContext?.currentGame);
-    setAnswers( !gameContext?.currentGame.gameOver ? gameContext?.currentGame.answers : { correct: 0, incorrect: 0 });
-    setStreak(!gameContext?.currentGame.gameover ? gameContext?.currentGame.currentStreak : 0);
+    // setAnswers( !gameContext?.currentGame.gameOver ? gameContext?.currentGame.answers : { correct: 0, incorrect: 0 });
+    // setStreak(!gameContext?.currentGame.gameover ? gameContext?.currentGame.currentStreak : 0);
     const fetchCountries = async () => {
       const _countries = await axios.get(`${getUrl()}/game/countries`);
       setCountries(_countries.data);

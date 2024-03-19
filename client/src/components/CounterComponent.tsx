@@ -31,7 +31,6 @@ const CounterComponent = ({
   useEffect(() => {
     if (incorrect === totalLife) {
       handleGameOver();
-      axios.get(`${getUrl()}/game/gameover/${userContext?.user.id}`);
       navigate("/lobby");
     }
   }, [incorrect, navigate]);
