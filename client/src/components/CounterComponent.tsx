@@ -27,7 +27,7 @@ const CounterComponent = ({
   useEffect(() => {
     if (incorrect === totalLife) {
       handleGameOver();
-      navigate("/lobby");
+      // navigate("/lobby");
     }
   }, [incorrect, navigate]);
 

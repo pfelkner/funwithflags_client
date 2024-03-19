@@ -9,10 +9,12 @@ import { getOptions, getRoundData, pickCountry, rollDifficulty } from "../hooks/
 import { Answers, Country, RoundData } from "../models/models";
 import useUser from "../context/_UserContext";
 import GameContext from "../context/GameContext";
+import { useNavigate } from "react-router-dom";
 
 
 
 const GameComponent = () => {
+  const navigate = useNavigate();
   const userContext = useUser();
   const gameContext = useContext(GameContext);
   
@@ -60,13 +62,15 @@ useEffect(() => {
       userId: userContext?.user.id,
       answers: answers,
       accuracy: answersRef.current.correct / (answersRef.current.correct + answersRef.current.incorrect),
-      lives: 2 - answersRef.current.incorrect,
+      lives: 2 - answers.incorrect,
       currentStreak: streak,
     }
 
     
 
       axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
+        const gameOver = res.data;
+        if (gameOver) navigate("/lobby");
       }).catch((err) => {
         console.log('Error saving game', err);
       });
@@ -91,7 +95,7 @@ useEffect(() => {
     }
     fetchCountries();
     return () => { 
-
+      console.log('unmounting GameComponent', gameContext);
     }
   }, []);
 

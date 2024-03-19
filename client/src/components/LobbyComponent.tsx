@@ -27,12 +27,13 @@ function LobbyComponent() {
   };
 
   useEffect(() => {
-    ;
+    console.log('lobby:fetchdata');
     const fetchData = async () => {
       const users = await axios.get(`${getUrl()}/auth/users`);
 
       const currentGame = await axios.get(`${getUrl()}/game/current/${user.id}`);
       if (currentGame.data != '' && gameContext) {
+        console.log('lobby:', currentGame, gameContext.currentGame);
         fetchedData = currentGame.data;
         gameContext?.setCurrentGame(currentGame.data);
         setHasCurrentGame(true);
