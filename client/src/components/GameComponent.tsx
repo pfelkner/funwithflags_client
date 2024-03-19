@@ -7,9 +7,6 @@ import axios from "axios";
 import { getUrl } from "../hooks/getUrl";
 import { getOptions, getRoundData, pickCountry, rollDifficulty } from "../hooks/gameHelpers";
 import { Answers, Country, RoundData } from "../models/models";
-import {
-  QueryClient,
-} from 'react-query'
 import useUser from "../context/_UserContext";
 import GameContext from "../context/GameContext";
 
@@ -25,6 +22,7 @@ const GameComponent = () => {
   const [round, setRoundData] = useState<any |null>(null);
   const [streak, setStreak] = useState<number>(0);
   const [countries, setCountries] = useState<Country[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const prevCorrect = useRef<number>(0);
   const prevIncorrect = useRef<number>(0);
@@ -40,7 +38,6 @@ useEffect(() => {
   streakRef.current = streak;
 }, [streak]);
 
-  const queryClient = new QueryClient();
 
   const fetchedData = gameContext?.currentGame;
   console.log('gameContext', fetchedData);
@@ -49,9 +46,13 @@ useEffect(() => {
   const handleGameOver = () => {
     setAnswers({ correct: 0, incorrect: 0 });
   };
-
+  // gameContext?.setCurrentGame({...gameContext.currentGame, gameOver: true});
   const processGuess = (isCorrect: boolean) => {
     setIsCorrectGuess(isCorrect);
+    isCorrect ? setStreak((prev) => prev + 1) : setStreak(0);
+    console.log('streak'.repeat(20));
+    console.log('isCorrect', isCorrect, 'streak', streak);
+    console.log('streak'.repeat(20));
     setTimeout(() => {
       isCorrect
         ? setAnswers((prev) => ({ ...prev, correct: prev.correct + 1 }))
@@ -66,13 +67,31 @@ useEffect(() => {
   };
 
   useEffect(() => {
-    if (answers.correct !== prevCorrect.current) {
-      setStreak((prev) => prev + 1);
-    } else if (answers.incorrect !== prevIncorrect.current) {
-      setStreak(0);
-    }
+    // if (answers.correct !== prevCorrect.current) {
+    //   setStreak((prev) => prev + 1);
+    // } else if (answers.incorrect !== prevIncorrect.current) {
+    //   setStreak(0);
+    // }
 
     prevCorrect.current = answers.correct;
+
+    const gameData = {
+      userId: userContext?.user.id,
+      answers: answers,
+      accuracy: answersRef.current.correct / (answersRef.current.correct + answersRef.current.incorrect),
+      lives: 2 - answersRef.current.incorrect,
+      currentStreak: streak,
+    }
+
+    
+    if (gameContext?.currentGame.gameOver) {
+
+      axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
+        console.log('saved', res);
+      }).catch((err) => {
+        console.log('Error saving game', err);
+      });
+    }
     setIsCorrectGuess(null);
   }, [answers]);
   
@@ -97,9 +116,9 @@ useEffect(() => {
   // );
 
   useEffect(() => {
-
-    setAnswers(gameContext?.currentGame.answers || { correct: 0, incorrect: 0 });
-    setStreak(gameContext?.currentGame.currentStreak || 0);
+console.log(gameContext?.currentGame);
+    setAnswers( !gameContext?.currentGame.gameOver ? gameContext?.currentGame.answers : { correct: 0, incorrect: 0 });
+    setStreak(!gameContext?.currentGame.gameover ? gameContext?.currentGame.currentStreak : 0);
     const fetchCountries = async () => {
       const _countries = await axios.get(`${getUrl()}/game/countries`);
       setCountries(_countries.data);
@@ -114,19 +133,23 @@ useEffect(() => {
     }
     fetchCountries();
     return () => { 
-      const gameData = {
-        userId: userContext?.user.id,
-        answers: answersRef.current,
-        accuracy: answersRef.current.correct / (answersRef.current.correct + answersRef.current.incorrect),
-        lives: 3,
-        currentStreak: streakRef.current,
-      }
-      console.log('DISMOUNT GAME'.repeat(20));
-      axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
-        console.log('saved', res);
-      }).catch((err) => {
-        console.log('Error saving game', err);
-      });
+      // const gameData = {
+      //   userId: userContext?.user.id,
+      //   answers: answersRef.current,
+      //   accuracy: answersRef.current.correct / (answersRef.current.correct + answersRef.current.incorrect),
+      //   lives: 2 - answersRef.current.incorrect,
+      //   currentStreak: streakRef.current,
+      // }
+      // console.log('DISMOUNT GAME'.repeat(20));
+      // console.log('before saving',gameContext?.currentGame);
+      // if (gameContext?.currentGame.gameOver) {
+
+      //   axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
+      //     console.log('saved', res);
+      //   }).catch((err) => {
+      //     console.log('Error saving game', err);
+      //   });
+      // }
       console.log('DISMOUNT GAME'.repeat(20));
     }
   }, []);
@@ -135,13 +158,22 @@ useEffect(() => {
     setCountries(prev => prev.filter((country) => country.name !== round?.name));
   }, [round]);
 
-  // if (error) {
-  //   return <div>There was an error</div>;
-  // }
-
-  // if (isLoading) {
-  //   return <div>Loading...</div>;
-  // }
+  useEffect(() => {
+    // const handleKeyDown = (event: KeyboardEvent) => {
+    //   if (event.key === 'Escape') {
+    //     setIsModalOpen(true);
+    //   }
+    // };
+  
+    // window.addEventListener('keydown', handleKeyDown);
+  
+    // return () => {
+    //   window.removeEventListener('keydown', handleKeyDown);
+    // };
+    console.log('#'.repeat(20));
+    console.log(streak);
+    console.log('#'.repeat(20));
+  }, []);
   
   return (
 

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import Button from "@mui/material/Button";
+import { Button, Table, TableBody, TableCell, TableRow, TableContainer, Paper } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import axios from "axios";
@@ -19,20 +19,27 @@ function LobbyComponent() {
 
 
   const handlePlayClick = async () => {
-
+    console.log(gameContext?.currentGame);
+    // gameContext?.setCurrentGame({...gameContext.currentGame, gameOver: true});
+    console.log('Lobby:handlePlayClick', gameContext?.currentGame);
     navigate("/funwithflags");
   };
 
   const handleContinueClick = () => {
-    navigate("/funwithflags", { state: { data: fetchedData } }); 
+    navigate("/funwithflags"); 
   };
 
   useEffect(() => {
+    
+    console.log('Lobby:gamecontext'.repeat(20));
+    console.log(gameContext?.currentGame);
+    console.log('Lobby:gamecontext'.repeat(20));
     const fetchData = async () => {
       const users = await axios.get(`${getUrl()}/auth/users`);
 
       const currentGame = await axios.get(`${getUrl()}/game/current/${user.id}`);
-      if (currentGame.data && gameContext) {
+      console.log('lobby:currentgame', currentGame);
+      if (currentGame.data != '' && gameContext) {
         fetchedData = currentGame.data;
         gameContext?.setCurrentGame(currentGame.data);
         setHasCurrentGame(true);
@@ -69,26 +76,29 @@ function LobbyComponent() {
 
         <h1>Welcome {user?.name} to the Flag Guessing Game!</h1>
       )}
-      {leaders
-        ? leaders.map((leader:any, index:number) => (
-            <h2 key={index}>
-              {index + 1}. place: {leader.name} with a streak of&nbsp;
-              {leader.streak}
-            </h2>
-          ))
-        :
-        <section>
-          <h2>
-            <Skeleton variant="text" sx={{ fontSize: '3rem', width: '30rem' }} />
-          </h2>
-          <h2>
-            <Skeleton variant="text" sx={{ fontSize: '3rem', width: '30rem' }} />
-            </h2>
-          <h2>
-            <Skeleton variant="text" sx={{ fontSize: '3rem', width: '30rem' }} />
-          </h2>
-        </section>
-        }
+       <TableContainer component={Paper} elevation={3} style={{ maxWidth: 400, marginTop: "20px" }}>
+        <Table>
+          <TableBody >
+            {leaders ? leaders.map((leader:any, index:number) => (
+              <TableRow key={index}>
+                <TableCell component="th" scope="row">
+                  {index + 1}. place
+                </TableCell>
+                <TableCell align="right">{leader.name}</TableCell>
+                <TableCell align="right">{leader.streak}</TableCell>
+              </TableRow>
+            )) : (
+              <TableRow>
+                <TableCell colSpan={3}>
+                  <Skeleton variant="text" sx={{ fontSize: '2rem', width: '100%' }} />
+                  <Skeleton variant="text" sx={{ fontSize: '2rem', width: '100%' }} />
+                  <Skeleton variant="text" sx={{ fontSize: '2rem', width: '100%' }} />
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </TableContainer>
       <Button variant="contained" color="primary" onClick={handlePlayClick}>
         Play
       </Button> 
