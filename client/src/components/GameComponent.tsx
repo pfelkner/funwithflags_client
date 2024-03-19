@@ -66,11 +66,18 @@ useEffect(() => {
       currentStreak: streak,
     }
 
-    
-
       axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
         const gameOver = res.data;
-        if (gameOver) navigate("/lobby");
+        if (gameOver) {
+          gameContext?.setCurrentGame(
+            {
+              ...gameContext.currentGame,
+              currentStreak: 0,
+              answers: { correct: 0, incorrect: 0 },
+            }
+          )
+          navigate("/lobby");
+      }
       }).catch((err) => {
         console.log('Error saving game', err);
       });
@@ -79,8 +86,14 @@ useEffect(() => {
   }, [answers]);
 
   useEffect(() => {
-    // setAnswers( !gameContext?.currentGame.gameOver ? gameContext?.currentGame.answers : { correct: 0, incorrect: 0 });
-    // setStreak(!gameContext?.currentGame.gameover ? gameContext?.currentGame.currentStreak : 0);
+    console.log('gamecontext'.repeat(20));
+    console.log(gameContext?.currentGame);
+    console.log('gamecontext'.repeat(20));
+    if (gameContext?.currentGame) {
+
+      setAnswers(gameContext?.currentGame.answers);
+      setStreak(gameContext?.currentGame.currentStreak);
+    }
     const fetchCountries = async () => {
       const _countries = await axios.get(`${getUrl()}/game/countries`);
       setCountries(_countries.data);
