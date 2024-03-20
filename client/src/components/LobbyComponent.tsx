@@ -26,6 +26,10 @@ function LobbyComponent() {
     navigate("/funwithflags"); 
   };
 
+  const handleStatsClick = () => {
+    navigate("/statistics"); 
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const users = await axios.get(`${getUrl()}/auth/users`);
@@ -67,7 +71,7 @@ function LobbyComponent() {
 
         <h1>Welcome {user?.name} to the Flag Guessing Game!</h1>
       )}
-       <TableContainer component={Paper} elevation={3} style={{ maxWidth: 400, marginTop: "20px" }}>
+       <TableContainer component={Paper} elevation={3} style={{ maxWidth: 400, margin: "20px" }}>
         <Table>
           <TableBody >
             {leaders ? leaders.map((leader:any, index:number) => (
@@ -90,18 +94,24 @@ function LobbyComponent() {
           </TableBody>
         </Table>
       </TableContainer>
-      <Button variant="contained" color="primary" onClick={handlePlayClick}>
-        Play
-      </Button> 
+      <div className="tw-p-4">
+
        <Button
-        variant="contained"
-        color="secondary"
-        onClick={handleContinueClick}
-        disabled={!hasCurrentGame}
-        style={{ marginTop: "10px" }} 
-      >
+       variant="contained"
+       color="secondary"
+       onClick={handleContinueClick}
+       disabled={!hasCurrentGame}
+       style={{ marginBottom: "10px" }} 
+       >
         Continue
       </Button>
+        </div>
+      <Button variant="contained" color="primary" onClick={handlePlayClick} style={{ marginBottom: "10px" }}>
+        New Game
+      </Button> 
+      <Button variant="contained" color="warning" onClick={handleStatsClick}>
+        Statistics
+      </Button> 
     </div>
   );
 }

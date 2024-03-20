@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CounterComponent from "./CounterComponent";
 import FlagComponent from "./FlagComponent";
 import StreakComponent from "./StreakComponent";
 import GuessComponent from "./GuessComponent";
 import axios from "axios";
 import { getUrl } from "../hooks/getUrl";
-import { getOptions, getRoundData, pickCountry, rollDifficulty } from "../hooks/gameHelpers";
+import { getRoundData } from "../hooks/gameHelpers";
 import { Answers, Country, RoundData } from "../models/models";
 import useUser from "../context/_UserContext";
 import GameContext from "../context/GameContext";

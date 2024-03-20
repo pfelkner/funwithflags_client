@@ -9,6 +9,8 @@ import UserContext from "./context/UserContext";
 import GameComponent from "./components/GameComponent";
 import { QueryClient, QueryClientProvider } from "react-query";
 import  GameContext  from "./context/GameContext";
+import DrawerComponent from "./components/DrawerComponent";
+import StatsComponent from "./components/StatsComponent";
 
 function App() {
 
@@ -25,7 +27,7 @@ function App() {
           <Route path="/" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/lobby" element={
-          <div>
+            <div>
             <ResponsiveAppBar />
             <LobbyComponent/>
           </div>
@@ -34,11 +36,13 @@ function App() {
             path="/funwithflags"
             element={
               <div>
+                <DrawerComponent/>
                 <ResponsiveAppBar/>
                   <GameComponent/>
               </div>
             }
           />
+          <Route path="/statistics" element={<StatsComponent />} />
         </Routes>
       </Router>
       </GameContext.Provider>
