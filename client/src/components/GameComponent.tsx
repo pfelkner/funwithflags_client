@@ -94,13 +94,14 @@ const GameComponent = () => {
       setStreak(gameContext?.currentGame.currentStreak);
     }
     const fetchCountries = async () => {
-      const countries = await axios.get(`${getUrl()}/game/countries`);
-      const roundData: RoundData = getRoundData(countries.data); // Use _countries.data instead of countries
-  
+      const prevCountires = gameContext?.currentGame?.prevCountries || [];
+      const countries = (await axios.get(`${getUrl()}/game/countries`))
+      const roundData: RoundData = getRoundData(countries.data.filter((country:any) => !prevCountires.includes(country)));
+
       setPrevCountries([...prevCountires, roundData.name]);
       setRoundData(roundData);
-      setLoading(false);
       setCountries(countries.data.filter((country: Country) => country.name !== roundData.name));
+      setLoading(false);
     }
     fetchCountries();
     return () => { 

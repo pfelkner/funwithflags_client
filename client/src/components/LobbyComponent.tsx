@@ -27,7 +27,6 @@ function LobbyComponent() {
   };
 
   useEffect(() => {
-    console.log('lobby:fetchdata');
     const fetchData = async () => {
       const users = await axios.get(`${getUrl()}/auth/users`);
 
