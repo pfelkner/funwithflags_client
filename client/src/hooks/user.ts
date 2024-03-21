@@ -3,9 +3,10 @@ import UserContext from "../context/UserContext";
 
 export const useUserId = (): string => {
   const userContext = useContext(UserContext);
-  const storedUser = JSON.parse(sessionStorage.getItem("user") || "");
+  const storedUser = sessionStorage.getItem("user") || "";
+  const user = JSON.parse(storedUser) || userContext?.user;
 
-  if (!userContext && !storedUser) throw new Error("Missing User");
+  if (!user) throw new Error("Missing User");
 
-  return userContext?.user?.id || storedUser.id;
+  return user.id;
 };
