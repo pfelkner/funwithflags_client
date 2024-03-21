@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignIn from "./components/signin/SignIn";
@@ -13,7 +13,6 @@ import DrawerComponent from "./components/DrawerComponent";
 import StatsComponent from "./components/StatsComponent";
 
 function App() {
-
   const [user, setUser] = useState<any>(null); // TODO: define user type 
   const [currentGame, setCurrentGame] = useState<any>(null); // TODO: define user type 
   const queryClient = new QueryClient();

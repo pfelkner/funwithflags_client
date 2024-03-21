@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function DrawerComponent() {
   const navigate = useNavigate();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);

@@ -5,6 +5,7 @@ import {yellow } from "@mui/material/colors";
 import axios from "axios";
 import UserContext from "../context/UserContext";
 import { getUrl } from "../hooks/getUrl";
+import { useUserId } from "../hooks/user";
 
 interface StreakComponentProps {
   streakCount: number;
@@ -15,9 +16,9 @@ interface StreakComponentProps {
 const StreakComponent = ({ streakCount }:StreakComponentProps ) => {
   const [highestStreak, setHighestStreak] = useState(0);
   const { user } : any = useContext(UserContext);
+  const userId = useUserId();
 
 useEffect(() => {
-  const userId = user.id;
   axios
     .get(`${getUrl()}/score/${userId}`)
     .then((response) => {
@@ -30,7 +31,7 @@ useEffect(() => {
 
   useEffect(() => {
       axios.post(`${getUrl()}/score/update`, {
-        userId: user.id,
+        userId: userId,
         highestStreak: streakCount,
       })
         .then(response => {

@@ -65,9 +65,10 @@ export default function SignIn() {
     };
     try {
       const resp = await axios.post(`${getUrl()}/auth/signin`, userData);
-      console.log(resp);
       if (resp.status === 200) {
         setUser(resp.data);
+        // sessionStorage.setItem("user", resp.data);
+        sessionStorage.setItem("user", JSON.stringify(resp.data));
 
         setOpenSuccess(true);
         setTimeout(() => {
@@ -76,7 +77,7 @@ export default function SignIn() {
         }, 500);
       }
     } catch (error) {
-      console.log(error.response.data);
+      console.error(error.response.data);
       setOpenError(true);
       setTimeout(() => {
         setOpenError(false);

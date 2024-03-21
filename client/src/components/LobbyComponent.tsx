@@ -6,19 +6,22 @@ import axios from "axios";
 import { Skeleton } from "@mui/material";
 import { getUrl } from "../hooks/getUrl";
 import GameContext from "../context/GameContext";
+import { useUserId } from "../hooks/user";
 
 
 function LobbyComponent() {
   const navigate = useNavigate();
-  const { user } : any = useContext(UserContext);
+  const { user, setUser } : any = useContext(UserContext);
   const [leaders, setLeader]:any = useState(null);
   const [hasCurrentGame, setHasCurrentGame] = useState(false);
   let fetchedData: any = null;
   const gameContext = useContext(GameContext);
+  const userId = useUserId();
 
 
 
   const handlePlayClick = async () => {
+    gameContext?.setCurrentGame(null);
     navigate("/funwithflags");
   };
 
@@ -30,16 +33,20 @@ function LobbyComponent() {
     navigate("/statistics"); 
   };
 
+
   useEffect(() => {
     const fetchData = async () => {
       const users = await axios.get(`${getUrl()}/auth/users`);
-
-      const currentGame = await axios.get(`${getUrl()}/game/current/${user.id}`);
-      if (currentGame.data != '' && gameContext) {
-        console.log('lobby:', currentGame, gameContext.currentGame);
-        fetchedData = currentGame.data;
-        gameContext?.setCurrentGame(currentGame.data);
-        setHasCurrentGame(true);
+      try { 
+        
+        const currentGame = await axios.get(`${getUrl()}/game/current/${userId}`);
+        if (currentGame.data != '' && gameContext) {
+          fetchedData = currentGame.data;
+          gameContext?.setCurrentGame(currentGame.data);
+          setHasCurrentGame(true);
+        }
+      } catch (error) {
+        console.error('There was an error!', error);
       }
 
       const scores = await axios.get(`${getUrl()}/score`);

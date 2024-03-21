@@ -10,6 +10,7 @@ import { Answers, Country, RoundData } from "../models/models";
 import useUser from "../context/_UserContext";
 import GameContext from "../context/GameContext";
 import { useNavigate } from "react-router-dom";
+import { useUserId } from "../hooks/user";
 
 
 
@@ -17,6 +18,7 @@ const GameComponent = () => {
   const navigate = useNavigate();
   const userContext = useUser();
   const gameContext = useContext(GameContext);
+  const userId = useUserId();
   
   const [answers, setAnswers] = useState<Answers>({ correct: 0, incorrect: 0 });
   const [isCorrectGuess, setIsCorrectGuess] = useState<boolean|null>(null);
@@ -53,16 +55,14 @@ const GameComponent = () => {
   // stores current game data to db
   // navigate to lobby if game over
   useEffect(() => {
-    console.log('round data pre save:', round);
     const gameData = {
-      userId: userContext?.user.id,
+      userId: userId,
       answers: answers,
       accuracy: answers.correct / (answers.correct + answers.incorrect),
-      lives: 2 - answers.incorrect,
+      lives: 3 - answers.incorrect,
       currentStreak: streak,
       prevCountries: prevCountires,
     }
-    console.log('posted game data:', gameData);
 
     axios.post(`${getUrl()}/game/saveGame`, gameData).then((res) => {
       const gameOver = res.data;
@@ -77,7 +77,7 @@ const GameComponent = () => {
         navigate("/lobby");
     }
     }).catch((err) => {
-      console.log('Error saving game', err);
+      console.error('Error saving game', err);
     });
 
     setIsCorrectGuess(null);
@@ -88,6 +88,11 @@ const GameComponent = () => {
   // fetches countries from db
   // sets round data (flag, options, name) 
   useEffect(() => {
+    const storedUser = JSON.parse(sessionStorage.getItem('user') || '');
+    if (storedUser) {
+      userContext?.setUser(storedUser);
+    }
+    userContext?.setUser(storedUser);
     if (gameContext?.currentGame) {
 
       setAnswers(gameContext?.currentGame.answers);
@@ -104,9 +109,7 @@ const GameComponent = () => {
       setLoading(false);
     }
     fetchCountries();
-    return () => { 
-      console.log('unmounting GameComponent', gameContext);
-    }
+
   }, []);
 
   // Triggered when the round data changes. Currently from fetchCountries-useEffect & processGuess)
