@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignIn from "./components/signin/SignIn";
@@ -9,7 +9,6 @@ import UserContext from "./context/UserContext";
 import GameComponent from "./components/GameComponent";
 import { QueryClient, QueryClientProvider } from "react-query";
 import  GameContext  from "./context/GameContext";
-import DrawerComponent from "./components/DrawerComponent";
 import StatsComponent from "./components/StatsComponent";
 
 function App() {
@@ -35,7 +34,6 @@ function App() {
             path="/funwithflags"
             element={
               <div>
-                <DrawerComponent/>
                 <ResponsiveAppBar/>
                   <GameComponent/>
               </div>

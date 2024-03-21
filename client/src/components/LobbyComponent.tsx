@@ -76,7 +76,7 @@ function LobbyComponent() {
     >
       {user && (
 
-        <h1>Welcome {user?.name} to the Flag Guessing Game!</h1>
+        <h1>Welcome {user?.name}</h1>
       )}
        <TableContainer component={Paper} elevation={3} style={{ maxWidth: 400, margin: "20px" }}>
         <Table>

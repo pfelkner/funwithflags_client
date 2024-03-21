@@ -14,7 +14,7 @@ const FlagComponent = ({ countryCode, isCorrectGuess }: FlagComponentProps) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "70vh",
+        height: "50vh",
       }}
     >
       <Card
