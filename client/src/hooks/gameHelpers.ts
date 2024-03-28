@@ -14,9 +14,14 @@ export const rollDifficulty = (): number[] => {
 };
 
 export const getOptions = (roll: number[], countries: Country[]): Country[] => {
-  const easy = countries.filter((country) => country.population >= 50000000);
-  const medium = countries.filter((country) => country.population >= 10000000);
-  const hard = countries.filter((country) => country.difficulty < 10000000);
+  const sorted = countries.sort((a, b) => a.population + b.population);
+  let twelvePercent = Math.floor(sorted.length * 0.12);
+  let twentyfivePercent = Math.floor(sorted.length * 0.25);
+  let sixtythreePercent = Math.floor(sorted.length * 0.63);
+
+  let easy = sorted.slice(0, twelvePercent);
+  let medium = sorted.slice(0, twentyfivePercent);
+  let hard = sorted.slice(0, sixtythreePercent);
 
   let picks: Country[] = [];
   let usedIndexes: Set<number> = new Set();
@@ -37,6 +42,10 @@ export const getOptions = (roll: number[], countries: Country[]): Country[] => {
     usedIndexes.add(index);
     picks.push(chosenArray[index]);
   });
+
+  console.log("#".repeat(20));
+  console.log(picks);
+  console.log("#".repeat(20));
 
   return picks;
 };

@@ -21,7 +21,7 @@ const CounterComponent = ({
 }: CounterComponentProps) => {
   const navigate = useNavigate();
   const [accuracy, setAccuracy] = useState(0);
-  const totalLife = 2;
+  const totalLife = 3;
   const remainingLifes = totalLife - incorrect;
 
   useEffect(() => {
